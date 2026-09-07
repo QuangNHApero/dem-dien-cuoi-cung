@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đêm Diễn Cuối Cùng — Storyboard</title>
+<meta name="description" content="Cinematic storyboard đầy đủ 53 cảnh, 6 hồi cho kịch bản Đêm Diễn Cuối Cùng: visual concept, composition, lighting, camera và AI image prompt từng cảnh.">
+<meta property="og:title" content="Đêm Diễn Cuối Cùng — Storyboard">
+<meta property="og:description" content="Cinematic storyboard 53 cảnh, 6 hồi: visual concept, composition, lighting, camera và AI image prompt từng cảnh.">
+<meta property="og:image" content="https://quangnhapero.github.io/dem-dien-cuoi-cung/storyboard/images/hoi-4-canh-24.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+/* ── Dark-first token set. Bare :root = the design's native (dark) world. ── */
+:root{
+  --ground:#0B0E10;
+  --surface:#12171A;
+  --surface-2:#171D21;
+  --hair:#242D32;
+  --hair-soft:#1B2226;
+  --bone:#E6E2D7;
+  --text:#DAD7CE;
+  --text-dim:#9AA2A3;
+  --text-faint:#6B7476;
+  --amber:#D99A4E;
+  --amber-deep:#8A5C24;
+  --ritual:#B33A31;
+  --ritual-deep:#5E1613;
+  --tunnel:#4E7A83;
+  --shadow:0 1px 0 rgba(255,255,255,.03) inset;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ground:#EDEEEB;
+    --surface:#F6F6F3;
+    --surface-2:#E7E9E5;
+    --hair:#CBCEC7;
+    --hair-soft:#DCDED8;
+    --bone:#1A1E20;
+    --text:#1F2426;
+    --text-dim:#525B5D;
+    --text-faint:#798285;
+    --amber:#8A5514;
+    --amber-deep:#B98A45;
+    --ritual:#8E2420;
+    --ritual-deep:#C98A85;
+    --tunnel:#2C5661;
+    --shadow:none;
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#EDEEEB;--surface:#F6F6F3;--surface-2:#E7E9E5;--hair:#CBCEC7;--hair-soft:#DCDED8;
+  --bone:#1A1E20;--text:#1F2426;--text-dim:#525B5D;--text-faint:#798285;
+  --amber:#8A5514;--amber-deep:#B98A45;--ritual:#8E2420;--ritual-deep:#C98A85;--tunnel:#2C5661;
+  --shadow:none;color-scheme:light;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground);
+  color:var(--text);
+  font-family:"Be Vietnam Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:400;
+  font-size:15px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ── Slate typography ── */
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+.slate{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-faint);
+}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
+
+/* ── Top bar ── */
+header.bar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--ground) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hair);
+}
+.bar-in{max-width:1080px;margin:0 auto;padding:9px 24px;display:flex;align-items:center;gap:18px}
+.bar-title{font-family:Newsreader,serif;font-size:16px;font-weight:600;color:var(--bone);white-space:nowrap}
+.bar-nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.bar-nav a{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--text-dim);text-decoration:none;padding:4px 8px;border-radius:2px;
+}
+.bar-nav a:hover{color:var(--bone);background:var(--surface-2)}
+.bar-nav a:focus-visible{outline:2px solid var(--amber);outline-offset:1px}
+
+/* ── Hero ── */
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--hair)}
+.eyebrow{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:20px}
+.hero h1{
+  font-size:clamp(40px,7vw,74px);line-height:.96;letter-spacing:-.02em;color:var(--bone);
+}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--amber)}
+.logline{
+  margin-top:22px;max-width:60ch;font-size:17px;line-height:1.66;color:var(--text-dim);
+  font-family:Newsreader,serif;
+}
+.logline b{color:var(--text);font-weight:600}
+
+.facts{
+  margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--hair);border:1px solid var(--hair);
+}
+.fact{background:var(--ground);padding:13px 15px;display:flex;flex-direction:column;gap:3px}
+.fact .v{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--bone);font-variant-numeric:tabular-nums}
+
+/* ── Section shell ── */
+section{padding:52px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;border-bottom:1px solid var(--hair);padding-bottom:12px}
+.sec-head h2{font-size:26px;color:var(--bone)}
+.sec-head .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--amber);letter-spacing:.12em}
+
+/* ── Review columns ── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media (max-width:820px){.two{grid-template-columns:1fr;gap:34px}}
+.rev h3{font-size:18px;color:var(--bone);margin-bottom:4px}
+.rev > p.sub{color:var(--text-faint);font-size:13px;margin:0 0 18px}
+ol.findings{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;counter-reset:f}
+ol.findings li{counter-increment:f;display:grid;grid-template-columns:26px 1fr;gap:12px}
+ol.findings li::before{
+  content:counter(f,decimal-leading-zero);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--text-faint);
+  padding-top:4px;font-variant-numeric:tabular-nums;
+}
+ol.findings.bad li::before{color:var(--ritual)}
+ol.findings.good li::before{color:var(--tunnel)}
+.findings .t{color:var(--bone);font-weight:500;display:block}
+.findings .d{color:var(--text-dim);font-size:13.5px;line-height:1.6}
+.findings .fix{
+  display:block;margin-top:5px;font-size:13px;color:var(--text-dim);
+  border-left:2px solid var(--amber-deep);padding-left:10px;
+}
+.findings .fix b{color:var(--amber);font-weight:500}
+
+/* ── Cast table ── */
+table.cast{width:100%;border-collapse:collapse;font-size:13.5px}
+table.cast th{
+  text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--text-faint);font-weight:500;padding:0 12px 8px 0;
+  border-bottom:1px solid var(--hair);
+}
+table.cast td{padding:9px 12px 9px 0;border-bottom:1px solid var(--hair-soft);vertical-align:top}
+table.cast td:first-child{color:var(--bone);font-weight:500;white-space:nowrap}
+table.cast td.num{font-family:"IBM Plex Mono",monospace;text-align:right;color:var(--text-faint);font-variant-numeric:tabular-nums;padding-right:0}
+table.cast td.look{color:var(--text-dim);font-size:13px}
+.tscroll{overflow-x:auto}
+
+/* ── Grade spine: the film's colour journey, one bar per scene ── */
+.spine{margin:0 0 8px;display:flex;gap:2px;align-items:flex-end;height:56px}
+.spine a{
+  flex:1 1 0;min-width:0;height:100%;border-radius:1px;position:relative;
+  text-decoration:none;opacity:.85;transition:opacity .15s,transform .15s;
+}
+.spine a:hover,.spine a:focus-visible{opacity:1;transform:scaleY(1.12);outline:none}
+.spine-legend{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* ── Scene rows ── */
+.scenes{display:flex;flex-direction:column}
+article.scene{
+  display:grid;grid-template-columns:4px 1fr;gap:0;
+  border-top:1px solid var(--hair);
+}
+article.scene:last-child{border-bottom:1px solid var(--hair)}
+.grade{width:4px;background:var(--gc,var(--amber))}
+.scene-body{padding:28px 0 32px 22px}
+.scene-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.scene-no{
+  font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:400;color:var(--text-faint);
+  font-variant-numeric:tabular-nums;line-height:1;
+}
+.scene-title{font-family:Newsreader,serif;font-size:24px;font-weight:600;color:var(--bone);line-height:1.15}
+.scene-slug{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--amber);
+  margin-bottom:20px;
+}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 34px}
+@media (max-width:820px){.fields{grid-template-columns:1fr}}
+.f{display:flex;flex-direction:column;gap:4px}
+.f .k{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-faint);
+}
+.f .v{font-size:14px;line-height:1.6;color:var(--text)}
+.f.wide{grid-column:1/-1}
+
+/* ── Prompt panel: the operative field ── */
+.prompt{
+  grid-column:1/-1;margin-top:8px;background:var(--surface);border:1px solid var(--hair);
+  border-left:2px solid var(--gc,var(--amber));
+}
+.prompt-top{
+  display:flex;align-items:center;gap:12px;padding:8px 12px;border-bottom:1px solid var(--hair-soft);
+}
+.prompt-top .k{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-faint);
+}
+button.copy{
+  margin-left:auto;background:transparent;border:1px solid var(--hair);color:var(--text-dim);
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 10px;border-radius:2px;cursor:pointer;
+}
+button.copy:hover{color:var(--bone);border-color:var(--text-faint)}
+button.copy:focus-visible{outline:2px solid var(--amber);outline-offset:1px}
+button.copy.done{color:var(--amber);border-color:var(--amber-deep)}
+.prompt-body{
+  padding:12px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.7;
+  color:var(--text-dim);white-space:pre-wrap;
+}
+
+/* ── Act band ── */
+.act{
+  margin:52px 0 0;padding:26px 0 22px;border-top:2px solid var(--hair);
+  display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start;
+}
+.act:first-of-type{margin-top:0}
+.act-fig{margin:0;display:flex;flex-direction:column;gap:8px}
+.act-img{display:block;width:100%;height:auto;background:var(--surface)}
+.act-fig figcaption{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-faint);
+}
+.act-meta{display:flex;flex-direction:column;gap:7px;padding-top:2px}
+.act h3{font-size:29px;color:var(--bone);line-height:1.1}
+.act .r{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--amber);letter-spacing:.1em}
+.act .note{color:var(--text-dim);font-size:14.5px;margin:0;max-width:48ch;font-family:Newsreader,serif}
+@media (max-width:820px){
+  .act{grid-template-columns:1fr;gap:20px}
+  .act-fig{max-width:420px}
+  .act h3{font-size:24px}
+}
+
+/* ── Gap card: honest structural information ── */
+.gap{
+  border:1px dashed var(--ritual-deep);background:color-mix(in srgb,var(--ritual) 7%,transparent);
+  padding:20px 22px;margin:0;display:flex;flex-direction:column;gap:6px;
+}
+.gap .h{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ritual)}
+.gap p{margin:0;color:var(--text-dim);font-size:14px;max-width:66ch}
+
+footer{border-top:1px solid var(--hair);padding:34px 0 60px;color:var(--text-faint);font-size:13px}
+a.lnk{color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber-deep)}
+a.lnk:hover{color:var(--bone)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<style>
+  body{margin:0}
+  img{max-width:100%}
+  .backlink{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-dim);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:3px;
+  }
+  .backlink:hover{color:var(--amber);border-color:var(--amber-deep)}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Đêm Diễn Cuối Cùng</span>
+    <nav class="bar-nav">
+      <a href="../">Kịch bản</a>
+      <a href="../review/">Review</a>
+      <a href="#board">Storyboard</a>
+      <a href="#look">Look</a>
+      <a href="#act1">I</a>
+      <a href="#act2">II</a>
+      <a href="#act3">III</a>
+      <a href="#act4">IV</a>
+      <a href="#act5">V</a>
+      <a href="#act6">VI</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">
+      <span class="slate">Kịch bản · Kinh dị tâm linh</span>
+      <span class="slate">Bản thảo</span>
+      <span class="slate">Cinematic storyboard</span>
+    </div>
+    <h1>Đêm Diễn<br><em>Cuối Cùng</em></h1>
+    <p class="logline">Một gia đình nghệ sĩ nhận quay reality tâm linh trong ngôi trường nghệ thuật bỏ hoang 21 năm. Trong đêm duy nhất ấy, <b>một nghi lễ còn dang dở bắt đầu lại</b> — và người bảo vệ ngôi trường đã chờ họ rất lâu.</p>
+    <div class="facts">
+      <div class="fact"><span class="slate">Số cảnh</span><span class="v">53</span></div>
+      <div class="fact"><span class="slate">Đánh số</span><span class="v">1–49, 58–61</span></div>
+      <div class="fact"><span class="slate">Thời lượng truyện</span><span class="v">Một đêm</span></div>
+      <div class="fact"><span class="slate">Bối cảnh chính</span><span class="v">Trường · Địa đạo</span></div>
+      <div class="fact"><span class="slate">Khung hình</span><span class="v">2.39 : 1</span></div>
+      <div class="fact"><span class="slate">Mốc đảo chiều</span><span class="v">00:00</span></div>
+    </div>
+  </div>
+
+  <section id="review">
+    <div class="sec-head"><span class="n">01</span><h2>Tóm tắt &amp; review</h2></div>
+
+    <p style="max-width:66ch;color:var(--text-dim);margin:0 0 14px">
+      Truyện mở bằng một cú lừa rất giỏi: thảm họa vỡ đê ở chợ Đồng Xuân, cây cầu Chương Dương sập, hai anh em Quang–Phong rơi xuống dòng nước — rồi <b style="color:var(--text)">BỐP</b>, đó chỉ là phim trường quảng cáo lẩu. Gia đình nghệ sĩ bảy người diễn cảnh chết rất thật, xong ngồi ăn ngay giữa đống đổ nát. Ba tháng sau, Phong — người anh đang gánh nợ cờ bạc và bị ai đó nhắn tin đe dọa — kéo cả nhà nhận một job reality: ngủ một đêm trong trường nghệ thuật bỏ hoang, nơi 21 năm trước có học sinh mất tích và trường phải đóng cửa.
+    </p>
+    <p style="max-width:66ch;color:var(--text-dim);margin:0 0 14px">
+      Trước cổng trường, một lão đạo sĩ xuất hiện, cảnh báo đừng ngủ lại. Ông không đi trừ tà — ông đi tìm con gái mất tích 21 năm. Quang, người duy nhất cảm nhận được sự bất thường, mời ông vào quay cùng. Đêm đó, trong phòng ký túc xá, vòng muối quanh Trang bị phá; linh hồn cô gái năm xưa nhập vào Trang, cất tiếng hát, làm cả nhà bất động — rồi linh hồn Trang bế Bon xuyên qua tường mà đi.
+    </p>
+    <p style="max-width:66ch;color:var(--text-dim);margin:0 0 14px">
+      Từ đó là hành trình xuống địa đạo dưới nền trường: một mảnh hồn đen dẫn đường bằng <em>ký ức</em>, một phòng nghi lễ với vòng tròn ký hiệu và máu khô, và sự thật dần lộ ra — nghi lễ năm xưa chưa bao giờ kết thúc. Kẻ thực hiện nó chính là người bảo vệ: 21 năm trước hắn là người yêu của cô gái, đã lừa cô làm nghi lễ đổi vận để thành sao, hiến một đứa trẻ. Cô gái biết sự thật, tự sát, và cái chết đó làm nghi lễ phản lại hắn. Từ đó hắn phải tiếp tục giết để giữ mạng, và hắn cần đúng một người "cùng mệnh" với cô gái: Trang.
+    </p>
+    <p style="max-width:66ch;color:var(--text-dim);margin:0 0 32px">
+      Cao trào: hắn vẽ lại vòng máu bằng máu cổ tay Trang, đúng 00:00. Nhưng hắn đã tính sai một thứ — <b style="color:var(--bone)">thời gian</b>: đồng hồ cổ dưới địa đạo lệch 17 phút so với đồng hồ của cả đoàn. Ở phần kết còn lại, người bảo vệ bị bắt, cô gái cuối cùng cũng hát trọn bài cho cha nghe, và lão đạo sĩ ra đi ngay sau khi nói "cha nghe hết rồi". Cảnh cuối: ba ngôi mộ — cô gái, đứa trẻ, và người cha.
+    </p>
+
+    <div class="two">
+      <div class="rev">
+        <h3>Chỗ đang rất được</h3>
+        <p class="sub">Xếp theo mức đóng góp vào phim</p>
+        <ol class="findings good">
+          <li><div><span class="t">Cold open là một luận đề, không phải chiêu</span><span class="d">Cảnh 1–5 dạy khán giả rằng gia đình này <em>diễn cái chết để bán đồ ăn</em>. Cả phim sau đó là câu hỏi: khi nào họ hết diễn? Và câu thoại quảng cáo "dù có chuyện gì xảy ra, gia đình vẫn phải ngồi lại với nhau" trở thành lời tiên tri.</span></div></li>
+          <li><div><span class="t">Lão đạo sĩ là nhân vật hay nhất</span><span class="d">Mục tiêu rõ (tìm con), khiếm khuyết rõ (ngày xưa quá bận, chưa bao giờ ngồi xuống nghe con hát), và payoff ở cảnh 58 trả đúng cái khiếm khuyết đó chứ không trả bằng đánh nhau. "Cha đang nghe đây" là câu thoại đắt nhất bản thảo.</span></div></li>
+          <li><div><span class="t">Chi tiết gà rán</span><span class="d">Cảnh 16–17 cứu nhân vật đạo sĩ khỏi thành khuôn mẫu. Một ông thầy 70 tuổi bỏ bàn tiệc để đi ăn gà rán với thằng nhát ma — đó là lúc khán giả bắt đầu thương ông.</span></div></li>
+          <li><div><span class="t">Reveal phản diện được cài bằng eyeline, không bằng thoại</span><span class="d">Cảnh 11, 12, 16: ánh mắt bảo vệ dừng lại ở Trang, rồi ở Bon, lâu hơn bình thường. Xem lại lần hai thì cả ba cảnh đó đổi nghĩa. Tuổi cũng khớp: ~52 bây giờ, ~31 khi là "người đàn ông trẻ".</span></div></li>
+          <li><div><span class="t">"Nó không biết. Nó nhớ."</span><span class="d">Quy tắc của mảnh hồn được phát biểu bằng một câu, và nó là quy tắc <em>có giới hạn</em> — mảnh hồn dẫn tới nơi ký ức bị giữ, không dẫn tới người sống. Chính giới hạn đó tạo ra căng thẳng ở cảnh 33.</span></div></li>
+          <li><div><span class="t">Twist thời gian</span><span class="d">Hai đồng hồ lệch nhau (cảnh 36 gieo, cảnh 40 nhận ra, cảnh 49 chốt) là một cú giải đố sạch, đúng chất "kẻ chuẩn bị 21 năm vẫn sai một chi tiết vật lý".</span></div></li>
+        </ol>
+      </div>
+
+      <div class="rev">
+        <h3>Chỗ cần sửa</h3>
+        <p class="sub">Xếp theo mức thiệt hại nếu để nguyên</p>
+        <ol class="findings bad">
+          <li><div><span class="t">Thiếu cảnh 50–57 — đúng đoạn cao trào</span><span class="d">Bản thảo nhảy từ 49 sang 58. Toàn bộ việc twist thời gian <em>hoạt động thế nào</em>, Bon được trả về ra sao, người bảo vệ bị hạ bằng gì — đang trống. Đây không phải lỗ hổng nhỏ, đây là hồi ba.</span><span class="fix"><b>Đề xuất:</b> 8 cảnh: 50 hắn cắt tay Trang lần hai / 51 Trang tỉnh trong không gian linh hồn, chọn quay lại / 52 đồng hồ cổ chạm 00:00 <em>sau</em> điện thoại 17 phút → nghi lễ khởi động khi vòng máu đã đứt / 53 hắn già đi tức thời (giá của lời nguyền) / 54 Bon xuất hiện thật ở hành lang / 55 đoàn phim tỉnh, camera bật lại — found footage ghi được / 56 hắn bị chính vòng máu kéo vào / 57 Quang nắm được tay Phong (trả nợ cảnh 3).</span></div></li>
+          <li><div><span class="t">Tuyến nợ của Phong bị bỏ rơi</span><span class="d">Cảnh 6, 7, 9, 13 xây dựng rất kỹ: tin nhắn đe dọa, "họ nói nếu anh không giải quyết thì chuyện này sẽ lên mạng", và câu hỏi vàng của Quang — <em>"vậy tại sao họ lại tìm đúng nhà mình?"</em>. Câu đó không bao giờ được trả lời. Cả hồi một đang treo.</span><span class="fix"><b>Đề xuất:</b> Thêm vào cảnh 43–45 một câu của bảo vệ: chính hắn (qua người khác) đẩy Phong vào nợ để ép gia đình nhận job. Lúc đó Phong không còn là ông anh yếu đuối — anh là cửa mà con quỷ đi vào nhà. Và Quang phải đối diện với việc mình đã <em>đồng ý đi</em>.</span></div></li>
+          <li><div><span class="t">"Cùng mệnh" chỉ được nói ra, không được cài</span><span class="d">Lý do phải là Trang, và "thằng bé là phần cuối", xuất hiện ở cảnh 45 như thông tin mới. Khán giả không có cách nào tự đoán trước.</span><span class="fix"><b>Đề xuất:</b> Cảnh 12 đang bỏ mất một cơ hội vàng. Trang dừng trước ảnh cô gái và chỉ nói "cô này đẹp thật". Hãy để <em>bảo vệ</em> nói: "Cô giống bà ấy." Và để Trang hát nhại vài nốt trong ảnh — cùng giai điệu sẽ vang lên ở cảnh 19.</span></div></li>
+          <li><div><span class="t">Muối là nút reset quá rẻ</span><span class="d">Hất muối là cả nhà tỉnh (cảnh 22). Hất muối là phá được nghi lễ 21 năm (cảnh 49). Một vũ khí không có giá thì không tạo được căng thẳng.</span><span class="fix"><b>Đề xuất:</b> Đặt giá ngay ở cảnh 15: muối chỉ đủ cho bảy vòng, dùng vào việc khác là có người mất vòng của mình. Đến cảnh 49, Quang phải phá vòng muối của <em>chính mình</em> để có nắm muối cuối.</span></div></li>
+          <li><div><span class="t">Đoạn giữa đi lòng vòng</span><span class="d">Mô-típ "gõ nền → tiếng rỗng → có đường khác" lặp bốn lần (23, 24, 32, 37). Cảnh 32–40 là chín cảnh mà tình thế gần như không đổi.</span><span class="fix"><b>Đề xuất:</b> Nén còn năm cảnh, và mỗi cảnh phải mất một thứ: một người lạc lại, đèn pin cuối cùng tắt, mảnh hồn yếu đi. Hiện tại nhóm đi qua địa đạo mà không mất gì.</span></div></li>
+          <li><div><span class="t">Bảy người trong phòng, ba người có việc</span><span class="d">Nhung (6 thoại), Mẹ (2), Cha (7) gần như không có function dramatic. Họ đứng đó để bị thôi miên. Producer và Nhà sản xuất còn là hai tên gọi cho cùng một chức năng.</span><span class="fix"><b>Đề xuất:</b> Gộp Producer/Nhà sản xuất thành một. Giao Nhung việc giữ máy quay (cô là người ghi được bằng chứng), giao Cha việc cơ khí (ông đã cạy khóa ở cảnh 25 — cho ông một cú payoff ở hồi ba). Mẹ nên là người duy nhất tin đạo sĩ ngay từ cảnh 15.</span></div></li>
+          <li><div><span class="t">Found footage bị bỏ nửa đường</span><span class="d">Camera cố định, đèn báo đỏ, timecode 22:47 được thiết lập rất mạnh ở cảnh 18 — rồi biến mất hoàn toàn khi vào địa đạo, và chỉ quay lại như đạo cụ ở cảnh 29, 43.</span><span class="fix"><b>Đề xuất:</b> Chọn một. Nếu giữ, hãy để chính footage là cái kể cho khán giả biết trước điều nhân vật chưa biết (khán giả thấy bảo vệ tắt camera <em>trước</em> khi nhân vật hiểu) — cảnh 29 đã làm đúng, nên làm thêm hai lần nữa.</span></div></li>
+          <li><div><span class="t">Lỗi liên tục nhỏ nhưng lộ</span><span class="d">Cảnh 20 kết bằng "một chiếc kéo gỗ cũ", cảnh 21 lại thành "kiếm gỗ đào". Cảnh 20 tả cả nhà bất động, cảnh 21 Phong–Duyên–Cha lại giữ được ông lão. Kịch bản dùng cả "BỐ" và "CHA". "Đứa trẻ" năm xưa là con ai — đến cảnh 61 dựng mộ mà chưa ai xác nhận.</span></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <div style="margin-top:38px">
+      <h3 style="font-size:18px;color:var(--bone);margin-bottom:14px">Tuyến nhân vật &amp; continuity cho storyboard</h3>
+      <div class="tscroll">
+        <table class="cast">
+          <thead><tr><th>Nhân vật</th><th>Chức năng</th><th>Look chốt cho mọi khung hình</th><th style="text-align:right">Thoại</th></tr></thead>
+          <tbody>
+            <tr><td>QUANG</td><td>POV. Người duy nhất cảm nhận được</td><td class="look">Nam ~30, mặt hiền cởi mở, sơ mi trơn xanh nhạt, tóc ngắn, luôn cầm điện thoại</td><td class="num">179</td></tr>
+            <tr><td>LÃO ĐẠO SĨ</td><td>Trái tim phim. Người cha đến muộn</td><td class="look">Nam ~72, gầy, áo vải nâu sẫm, quần rộng, túi vải bạc màu, kiếm gỗ đào sẫm có nét chữ đỏ đã phai</td><td class="num">166</td></tr>
+            <tr><td>BẢO VỆ</td><td>Phản diện. Kẻ sợ chết</td><td class="look">Nam ~52, gầy, da sạm, đồng phục bảo vệ cũ bạc, mặt gần như không biểu cảm</td><td class="num">71</td></tr>
+            <tr><td>PHONG</td><td>Cửa cho tai họa đi vào nhà</td><td class="look">Nam ~35, vai rộng hơn Quang, mắt trũng vì mất ngủ, áo khoác tối màu</td><td class="num">55</td></tr>
+            <tr><td>DUYÊN</td><td>Người mẹ. Động lực khẩn cấp</td><td class="look">Nữ ~33, tóc buộc gọn, áo len mỏng, vợ Phong</td><td class="num">30</td></tr>
+            <tr><td>TRANG</td><td>Vật chứa. Có agency từ cảnh 48</td><td class="look">Nữ ~27, cao, tóc dài đen buông hai vai, quen ống kính; khi bị nhập: mắt trắng dã không đồng tử</td><td class="num">26</td></tr>
+            <tr><td>CÔ GÁI (linh hồn)</td><td>Nạn nhân gốc, con gái đạo sĩ</td><td class="look">Nữ ~20, tóc dài, váy trắng đơn giản, mặt đầy nước mắt — <em>phải giống Trang một cách bất an</em></td><td class="num">7</td></tr>
+            <tr><td>BON</td><td>Phần cuối của nghi lễ</td><td class="look">Bé trai 2 tuổi, má tròn, mũ vải nhỏ, áo kẻ</td><td class="num">16</td></tr>
+            <tr><td>NHUNG · CHA · MẸ</td><td>Cần được giao việc (xem review)</td><td class="look">Nữ ~28 / vợ chồng ~60</td><td class="num">6·9·2</td></tr>
+            <tr><td>PRODUCER</td><td>Giọng của guồng máy sản xuất</td><td class="look">Nam ~35, sơ mi gọn, tai nghe, bộ đàm, laptop</td><td class="num">31</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="look">
+    <div class="sec-head"><span class="n">02</span><h2>Ngôn ngữ hình ảnh</h2></div>
+    <div class="two">
+      <div>
+        <div class="f" style="margin-bottom:20px"><span class="k">Nguyên tắc gốc</span><span class="v">Phim này nói về <b>diễn</b> và <b>thật</b>. Nên máy quay có hai chế độ, và khán giả phải cảm được sự khác nhau: <em>chế độ sản xuất</em> — gimbal mượt, ánh sáng ba điểm, đủ sáng, an toàn; và <em>chế độ thật</em> — một nguồn sáng duy nhất, handheld thở theo người, tối đến mức khung hình mất góc. Đêm ở trường bắt đầu ở chế độ một và tuột dần sang chế độ hai, không quay lại.</span></div>
+        <div class="f" style="margin-bottom:20px"><span class="k">Ống kính</span><span class="v">Hồi I anamorphic 40–75mm, khoảng cách bình thường của người. Vào trường: 32mm và rộng hơn — kiến trúc luôn to hơn người. Địa đạo: 85–100mm, nén không gian, hậu cảnh chỉ còn là bóng tối có kết cấu. Không gian linh hồn (cảnh 44): 50mm phẳng, không méo, không grain.</span></div>
+        <div class="f"><span class="k">Motif hình phải lặp</span><span class="v">Hai bàn tay gần nhau mà chưa chạm (3 · 21 · 48 · 57). Người đứng sau kính, thấy phản chiếu nhiều hơn thấy người (10 · 13 · 17 · 59). Đồng hồ trong khung hình (18 · 29 · 36 · 40 · 41 · 49). Một đường muối trắng trên nền tối (15 · 18 · 22 · 49).</span></div>
+      </div>
+      <div>
+        <div class="f" style="margin-bottom:20px"><span class="k">Bảng màu theo hồi</span><span class="v" style="display:flex;flex-direction:column;gap:7px;margin-top:4px">
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#D9A05B;flex:0 0 auto"></span><span style="font-size:13px">Hồi I — nắng Hà Nội, tungsten gia đình. Bão hòa, ấm, an toàn.</span></span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#B0763C;flex:0 0 auto"></span><span style="font-size:13px">Hồi II — golden hour cạn dần thành chạng vạng.</span></span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#2F4A54;flex:0 0 auto"></span><span style="font-size:13px">Hồi III — trăng lam lục, bóng tối có kết cấu.</span></span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#6B4A2E;flex:0 0 auto"></span><span style="font-size:13px">Địa đạo — đèn dầu / đèn pin đơn nguồn trên nền đen.</span></span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#8E2420;flex:0 0 auto"></span><span style="font-size:13px">Nghi lễ — đỏ máu khô, chỉ đỏ, nến.</span></span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#EFEDE6;flex:0 0 auto"></span><span style="font-size:13px">Linh hồn — trắng xóa, không bóng đổ, không chân trời.</span></span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:26px;height:14px;background:#D8C9A8;flex:0 0 auto"></span><span style="font-size:13px">Kết — rạng sáng nhạt, hết bão hòa, tĩnh.</span></span>
+        </span></div>
+        <div class="f"><span class="k">Cách dùng bộ prompt</span><span class="v">Prompt viết bằng tiếng Anh vì model ảnh hiểu tốt hơn. Mỗi prompt đã tự chứa look nhân vật để dùng độc lập. Muốn giữ nhất quán mặt diễn viên, thay cụm mô tả nhân vật bằng token nhân vật của bạn (LoRA / character reference) và giữ nguyên phần còn lại.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="n">03</span><h2>Đường màu của phim</h2></div>
+    <p style="color:var(--text-dim);margin:0 0 18px;max-width:66ch;font-size:14px">Mỗi vạch là một cảnh, theo thứ tự. Màu là nhiệt độ grade của cảnh đó. Bấm vào một vạch để nhảy tới cảnh.</p>
+    <div class="spine" id="spine" aria-label="Đường màu 53 cảnh, bấm để nhảy tới cảnh"></div>
+    <div class="spine-legend"><span class="slate">Cảnh 01 · chợ sáng</span><span class="slate">Cảnh 44 · linh hồn</span><span class="slate">Cảnh 61 · nghĩa trang</span></div>
+  </section>
+
+  <section id="board">
+    <div class="sec-head"><span class="n">04</span><h2>Storyboard · 53 cảnh · 6 hồi</h2></div>
+    <div id="scenes" class="scenes"></div>
+  </section>
+
+  <footer>
+    Bộ storyboard dựng từ bản thảo <a class="lnk" href="https://github.com/QuangNHApero/dem-dien-cuoi-cung">QuangNHApero/dem-dien-cuoi-cung</a> · 53 cảnh hiện có, cảnh 50–57 còn trống trong bản thảo gốc.
+  </footer>
+</div>
+
+<script>
+const ACTS = [
+  {id:'act1', rn:'I', h:'Gia đình diễn cái chết', r:'Cảnh 01–09', note:'Hai lần lừa khán giả: thảm họa là quảng cáo, và job này là một cái bẫy.', cap:'Cảnh 01 — Buổi sáng bình thường cuối cùng',
+   img:'images/hoi-1-canh-01.webp'},
+  {id:'act2', rn:'II', h:'Ngôi trường nhận ra họ', r:'Cảnh 10–17', note:'Ánh sáng cạn dần. Ai cũng vui, trừ Quang và người bảo vệ.', cap:'Cảnh 10 — Cánh cổng và ô cửa sổ tầng ba',
+   img:'images/hoi-2-canh-10.webp'},
+  {id:'act3', rn:'III', h:'Đêm bắt đầu', r:'Cảnh 18–23', note:'Vòng muối bị phá. Từ đây không còn chế độ sản xuất.', cap:'Cảnh 18 — 22:47',
+   img:'images/hoi-3-canh-18.webp'},
+  {id:'act4', rn:'IV', h:'Địa đạo và nghi lễ', r:'Cảnh 24–39', note:'Mảnh hồn dẫn đường bằng ký ức, và đối thủ hóa ra là người sống.', cap:'Cảnh 24 — Cánh cửa sắt dưới lớp nền',
+   img:'images/hoi-4-canh-24.webp'},
+  {id:'act5', rn:'V', h:'Cao trào', r:'Cảnh 40–49', note:'Đối đầu, tiết lộ, và một cú tính sai về thời gian.', cap:'Cảnh 40 — 23:41 và 23:58',
+   img:'images/hoi-5-canh-40.webp'},
+  {id:'act6', rn:'VI', h:'Cha nghe hết rồi', r:'Cảnh 58–61', note:'Phim không đóng bằng thắng trận, mà bằng một bài hát được nghe trọn.', cap:'Cảnh 58 — Cha đang nghe đây',
+   img:'images/hoi-6-canh-58.webp'},
+];
+</script>
+<script>
+const SCENES = [
+{n:1,act:'act1',t:'Buổi sáng bình thường cuối cùng',slug:'NGOẠI – CHỢ ĐỒNG XUÂN – NGÀY',g:'#D9A05B',
+vis:'Khung hình mở phim phải "bán" được sự bình thường tuyệt đối, để cú lừa ở cảnh 4 có chỗ đứng. Nắng, tiếng rao, một gia đình đang chụp ảnh con. Không một dấu hiệu kinh dị nào.',
+comp:'Tiền cảnh: Quang đứng hơi tách khỏi dòng người, tay giơ điện thoại — anh ở trong khung hình của chính mình. Trung cảnh: Trang cúi chỉnh mũ cho Bon. Hậu cảnh: dãy hàng chợ chen chúc làm nhòe chiều sâu.',
+chr:'QUANG (~30, sơ mi trơn) mắt tò mò, khóe miệng cong lên khi bắt được khoảnh khắc. TRANG (~27, tóc dài) đang cười thành tiếng. BON (2 tuổi) chu môi thẳng vào ống kính.',
+env:'Chợ Đồng Xuân, mái nhà cũ, biển hiệu tôn, bạt xanh, xe máy dựng chen nhau, hàng hóa treo kín.',
+lit:'Nắng sớm chếch mạnh từ khe giữa hai dãy nhà, đổ vệt sáng cắt ngang khung. Bounce ấm từ tường vôi vàng.',
+col:'Vàng nghệ, cam bạt, xanh lá cây bạt, da người ấm. Bão hòa cao — đây là cảnh bão hòa nhất phim.',
+cam:'Handheld nhẹ 50mm, ngang tầm mắt, thở theo Quang. Không cut nhanh: một shot dài để khán giả tin đây là đời thật.',
+p:'Cinematic film still, morning at Dong Xuan market in Hanoi. A kind-faced Vietnamese man about 30 in a plain light blue shirt stands slightly apart from the crowd, holding up a phone to film. Mid-ground, a tall Vietnamese woman about 27 with long black hair crouches to adjust a small cloth cap on a 2-year-old boy who is pursing his lips at the camera. Dense market stalls, tin signs, blue tarpaulins, parked motorbikes behind. Hard morning sunlight slicing between buildings, warm bounce off yellow walls. Highly saturated warm palette. Anamorphic 2.39:1, 50mm, handheld, 35mm film grain.'},
+
+{n:2,act:'act1',t:'Đám đông chạy ngược',slug:'NGOẠI – ĐƯỜNG PHỐ – NGÀY',g:'#B98246',
+vis:'Sự bình thường bị xé. Cả khung hình chỉ còn một hướng: chạy. Quang liên tục ngoái lại — anh là người duy nhất còn nhìn về phía sau.',
+comp:'Máy đặt thấp giữa dòng người, hai anh em lao thẳng vào ống kính rồi vượt qua. Phong chỉ tay lệch trái khung — hướng đó là gia đình. Bụi khổng lồ cuộn lên ở cuối phố, chiếm 1/3 trên.',
+chr:'PHONG (~35) mặt hoảng nhưng vẫn là người ra quyết định, tay nắm cánh tay Quang. QUANG thở gấp, ngoái đầu, mất phương hướng.',
+env:'Phố cũ hẹp, quầy hàng đang bị kéo cửa, xe máy quay đầu giữa đường, loa phát thanh treo trên cột điện.',
+lit:'Nắng trưa gắt, tương phản cao, bóng người đổ dài trên nhựa đường. Bụi làm ánh sáng thành cột thấy được.',
+col:'Ấm bị pha xám bụi — bắt đầu tuột khỏi bảng màu bão hòa của cảnh 1.',
+cam:'Handheld thô, rung theo bước chân, 35mm. Có thể whip pan khi Phong chỉ tay.',
+p:'Cinematic film still, panic evacuation on a narrow old Hanoi street. Low camera in the middle of a running crowd; a sturdy Vietnamese man about 35 in a dark jacket grips the arm of a younger man about 30 in a light shirt, both running toward camera. The younger man looks back over his shoulder. Vendors yanking shutters down, motorbikes turning around, loudspeaker on a power pole. A huge dust cloud billowing at the end of the street. Harsh midday sun, high contrast, visible dust shafts, dust-greyed warm palette. Anamorphic 2.39:1, 35mm, raw handheld, motion blur, 35mm film grain.'},
+
+{n:3,act:'act1',t:'Hai bàn tay cách nhau vài centimet',slug:'NGOẠI – CẦU CHƯƠNG DƯƠNG – NGÀY',g:'#8FA8AE',
+vis:'Cảnh gieo hạt quan trọng nhất phim: Quang không với được tay anh trai. Cảm giác "mình luôn không đủ" sẽ được trả nợ ở hồi ba.',
+comp:'Khung hình chéo mạnh theo đoạn cầu đang nghiêng. Phong treo bám thanh thép ở góc trên phải, Quang trượt xuống góc dưới trái. Khoảng trống giữa hai bàn tay đặt đúng tâm khung — đó là subject thật của cảnh.',
+chr:'PHONG một tay bám thép, một tay vươn hết cỡ, gân cổ nổi. QUANG mắt mở to, các ngón tay xòe hết, người đã ở ngoài mép cầu.',
+env:'Mặt cầu thép nứt toác, xe trượt khỏi lòng đường, lan can gãy, sóng nước nâu đục dựng lên phía sau.',
+lit:'Trời trắng bệch quá sáng, nhân vật gần thành silhouette. Nước phản chiếu ánh sáng bẩn lên mặt họ.',
+col:'Xám lam, nâu bùn, trắng cháy. Toàn bộ hơi ấm của cảnh 1 đã bị rút sạch.',
+cam:'85mm nén, máy dutch angle mạnh. Chốt bằng một shot cận hai bàn tay, rồi cả khung chìm trong màu trắng.',
+p:'Cinematic film still, collapsing steel bridge over a brown flood surge. Strong diagonal composition along the tilting deck. Upper right: a Vietnamese man about 35 hanging from a steel beam, one arm stretched out to full reach, neck straining. Lower left: a younger Vietnamese man about 30 sliding off the broken edge, fingers splayed, eyes wide. The empty gap between their two hands sits exactly at frame center. Cars sliding, torn railing, a huge wave rising behind. Blown-out white sky, near-silhouette figures, desaturated blue-grey and mud brown. Anamorphic 2.39:1, 85mm, extreme dutch angle, 35mm film grain.'},
+
+{n:4,act:'act1',t:'BỐP — đây chỉ là quảng cáo',slug:'NỘI – PHIM TRƯỜNG QUẢNG CÁO – NGÀY',g:'#E8C48A',
+vis:'Cú lừa được bung ra. Chìa khóa hình ảnh: một khung hình duy nhất chứa cả hai nửa — nửa trái là đống đổ nát ngập lụt, nửa phải là bàn ăn gia đình ấm cúng. Đó là luận đề của cả phim trong một shot.',
+comp:'Wide đối xứng cắt đôi khung. Trái: xe lật, máy khói, dây bảo hộ. Phải: bàn ăn, nồi lẩu bốc khói, bảy người ngồi vào chỗ. Quang đứng đúng đường ranh giữa, vừa ngồi dậy khỏi nệm crash.',
+chr:'QUANG mặt còn nước giả, ngơ ngác, đang được nhân viên hóa trang lau. PHONG mặc bộ ướt sũng giả, cười. ĐẠO DIỄN (~45) tai nghe, bộ đàm, mắt dán monitor.',
+env:'Studio rộng, phông nền khu phố ngập nước, giàn đèn treo, cáp bò trên sàn, xe đẩy đồ ăn, monitor village.',
+lit:'Ánh sáng nhân tạo bộc lộ mình: đèn HMI thấy rõ ngoài khung "thật", flag và diffusion lộ ra. Bàn ăn được đánh sáng ấm giả tạo, đẹp một cách quá đáng.',
+col:'Vàng mật quảng cáo ở nửa phải, xám lam nguội ở nửa trái. Sự chênh lệch là chủ ý.',
+cam:'Wide 27mm tĩnh trên tripod — lần đầu máy hết rung, vì giờ ta ở "chế độ sản xuất". Sau đó push-in vào nồi lẩu như một TVC thật.',
+p:'Cinematic film still, wide symmetrical shot inside a large film studio, frame split in two. Left half: a staged flood disaster set, overturned cars, smoke machine haze, safety harnesses, exposed lighting rigs and cables. Right half: a warm family dinner table with a steaming hotpot, seven Vietnamese family members sitting down. A Vietnamese man about 30 stands exactly on the dividing line, fake water still on his face, dazed, a makeup artist wiping him. A director about 45 with headset watches a monitor. Honey-warm advertising light on the right, cold grey-blue on the left. Anamorphic 2.39:1, 27mm, locked-off tripod, 35mm film grain.'},
+
+{n:5,act:'act1',t:'Ngon trọn bữa, ấm trọn nhà',slug:'NGOẠI – KHU PHỐ – NGÀY',g:'#C9B79A',
+vis:'Gia đình trở thành hình ảnh trên màn hình LED giữa thành phố. Họ đã bị biến thành sản phẩm — và người đi đường tin. "Gia đình này diễn thật ghê."',
+comp:'Low angle nhìn lên màn hình LED khổng lồ. Người đi đường nhỏ bé ở tiền cảnh dưới, chỉ thấy đỉnh đầu và bóng. Trên màn hình, khung hình gia đình đứng lại — hoàn hảo, đóng băng.',
+chr:'Hai người đi đường vô danh dừng lại xem. Trên màn hình: gia đình bảy người quanh bàn ăn, ai cũng đang cười.',
+env:'Ngã tư thành phố, màn hình LED tòa nhà, dây điện chằng chịt cắt ngang khung, xe máy dừng đèn đỏ.',
+lit:'Nguồn sáng chính giờ là chính màn hình — ánh sáng vàng nhân tạo hắt xuống mặt người đi đường. Ánh sáng đến từ hình ảnh, không từ đời thật.',
+col:'Vàng LED quá bão hòa trên nền chiều xám của thành phố.',
+cam:'Tĩnh, 40mm, low angle. Giữ shot đủ lâu để logo hiện lên và khung hình gia đình đóng băng. Cut sang chữ "BA THÁNG SAU".',
+p:'Cinematic film still, low-angle shot of a giant LED billboard on a city building in Hanoi at dusk. The billboard shows a frozen perfect image of a seven-person Vietnamese family laughing around a steaming hotpot dinner. In the dark foreground below, two anonymous pedestrians stand watching, lit only by the screen. Tangled overhead power lines cross the frame, motorbikes waiting at a red light. Oversaturated yellow LED glow against a grey city evening. Anamorphic 2.39:1, 40mm, locked-off, 35mm film grain.'},
+
+{n:6,act:'act1',t:'Chiếc phong bì màu nâu',slug:'NỘI – PHÒNG KHÁCH NHÀ GIA ĐÌNH – TỐI',g:'#B98A5A',
+vis:'Cảnh gia đình yên bình đầu tiên mà không có camera nào ghi lại — và đó là lúc bí mật đi vào nhà. Toàn bộ căng thẳng nằm trong một đồ vật: phong bì nâu.',
+comp:'Wide phòng khách, mọi người rải rác ở các độ cao khác nhau (Trang dưới sàn, Mẹ trên sofa, Quang dựa ghế). Phong bước vào từ cửa nền sau, đặt phong bì xuống bàn — vật đó ở trung tâm hình học của khung. Quang ngẩng lên, eyeline chỉ vào nó.',
+chr:'PHONG mệt rã, vai xệ, đặt phong bì xuống rồi lập tức cầm lại — cử chỉ tự tố giác. DUYÊN đứng sau chồng, nhìn anh, không nói. QUANG nhìn phong bì, rồi nhìn anh trai.',
+env:'Phòng khách rộng, ấm. Tường treo ảnh gia đình nhiều năm hoạt động nghệ thuật — hàng chục khung hình họ đang diễn. TV phát chương trình giải trí.',
+lit:'Tungsten ấm từ đèn bàn và đèn trần, cộng ánh xanh lạnh nhấp nháy của TV — hai nhiệt độ màu trong một phòng, báo hiệu hai sự thật.',
+col:'Nâu gỗ, vàng đèn, xanh TV. Ấm nhưng đã có một vệt lạnh.',
+cam:'Tĩnh 32mm, chiều sâu lớn để thấy hết bảy người. Chỉ một cú nhích nhẹ khi Phong cầm lại phong bì.',
+p:'Cinematic film still, wide shot of a warm Vietnamese family living room at night. Family members at different heights: a young woman sitting on the floor eating fruit beside a toddler with a toy car, an older woman on the sofa, an older man reading a file at a side table, a man about 30 lounging against an armchair. A tired man about 35 has just entered and placed a brown envelope on the center table, his wife standing behind him watching him silently. Walls covered with dozens of framed family photos from years of show business. A TV flickers cold blue against warm tungsten lamps. Anamorphic 2.39:1, 32mm, locked-off, 35mm film grain.'},
+
+{n:7,act:'act1',t:'Bao giờ trả?',slug:'NỘI – PHÒNG NGỦ PHONG – ĐÊM',g:'#4A5B6B',
+vis:'Cảnh lạnh nhất hồi một, và nó không có ma. Nguồn sáng duy nhất là màn hình điện thoại đầy tin nhắn đe dọa hắt lên mặt Phong từ dưới.',
+comp:'Cận trung Phong ngồi trên giường trong bóng tối gần như toàn phần, chỉ mặt anh sáng. Rất nhiều không gian đen trống quanh anh. Khi Duyên mở cửa, một vệt sáng hành lang cắt vào — nhưng không tới được chỗ anh.',
+chr:'PHONG bất động, mắt đọc, không phản ứng. Khi tắt màn hình, mặt anh biến mất hoàn toàn vào tối. DUYÊN vào, đặt cốc nước, ngồi xuống, nắm tay anh — bàn tay anh không siết lại.',
+env:'Phòng ngủ tối, giường, bàn nhỏ, cửa hé. Không đồ vật nào đáng chú ý — sự trống trải là chủ ý.',
+lit:'Một nguồn duy nhất: màn hình điện thoại, hắt từ dưới lên (underlight) — cách đánh sáng của phản diện, dùng cho người mình thương. Rim sáng lạnh yếu từ cửa sổ.',
+col:'Xanh lam lạnh của màn hình trên đen tuyệt đối. Không một chút ấm.',
+cam:'Tĩnh 65mm, cận. Không di chuyển suốt cảnh — sự bất động là nội dung.',
+p:'Cinematic film still, a dark bedroom at night. Medium close-up of a Vietnamese man about 35 sitting on the edge of a bed, his face lit only from below by a phone screen showing a stack of threatening text messages. Vast empty black space around him. A door is ajar, a thin cold strip of hallway light falling short of him. His wife enters and sets down a glass of water. Single-source cold blue phone underlight against absolute black, no warm tones. Anamorphic 2.39:1, 65mm, locked-off, 35mm film grain.'},
+
+{n:8,act:'act1',t:'Nếu có ma thật thì rating cao nhất',slug:'NỘI – PHÒNG KHÁCH – NGÀY',g:'#C8B487',
+vis:'Guồng máy sản xuất được trình bày như một thứ hoàn toàn hợp lý: bảo hiểm, quy trình, hợp đồng đã lock. Nỗi sợ thật của Quang bị xử lý như một mục cần giải quyết trong lịch quay.',
+comp:'Bố cục đối lập hai bên bàn: một mình Producer với laptop ở một phía, cả gia đình bảy người ở phía kia — nhưng Producer là người kiểm soát khung hình, vì hình ảnh ngôi trường bỏ hoang đang chiếu trên laptop hướng về phía họ. Chèn cận: ảnh ngôi trường, hành lang tối, cửa sổ vỡ.',
+chr:'PRODUCER (~35) chỉnh tề, điềm tĩnh, liên tục nhìn lịch. TRANG nghiêng về phía trước, thích thú. QUANG cau mày, ngả người ra sau — người duy nhất có body language từ chối.',
+env:'Vẫn phòng khách cảnh 6, giờ là ban ngày. Laptop, tập hợp đồng, trợ lý ghi chú. Tấm ảnh in ngôi trường nằm trên bàn.',
+lit:'Ánh sáng ngày qua cửa sổ lớn, mềm, đều — ánh sáng của một cuộc họp, không có gì để giấu. Trớ trêu.',
+col:'Trung tính ấm, be, gỗ. Phẳng và an toàn — làm bức ảnh ngôi trường trên màn hình càng lệch tông.',
+cam:'Tĩnh, hai over-the-shoulder đối nhau 50mm. Khi Quang nói "Em sợ ma", cắt sang cận Quang, giữ lâu hơn nhịp cười của mọi người.',
+p:'Cinematic film still, daytime meeting in a Vietnamese family living room. On one side of a table, a neat producer about 35 in a pressed shirt with an open laptop; on the other side, seven family members. The laptop screen shows photographs of an abandoned school: broken windows, dark corridors, walls eaten by vines. A tall young woman leans forward interested; a man about 30 frowns and leans back, arms folded. Soft even daylight from large windows, warm neutral beige and wood palette, flat and safe. Anamorphic 2.39:1, 50mm, over-the-shoulder, locked-off, 35mm film grain.'},
+
+{n:9,act:'act1',t:'Chỉ một đêm thôi',slug:'NỘI – HÀNH LANG NHÀ – TỐI',g:'#96703F',
+vis:'Cảnh đưa ra quyết định của cả phim, và nó là một sự đồng ý dở. Quang biết có gì sai, biết anh trai đang giấu, và vẫn nói "Được". Sau này anh sẽ phải trả cho tiếng "Được" đó.',
+comp:'Hành lang hẹp, hai anh em cùng trong khung nhưng lệch trục: Phong quay mặt đi, Quang chính diện. Cuối hành lang, cửa phòng khách để hé — thấy tấm ảnh ngôi trường vẫn nằm trên bàn, sáng lên trong nền sâu.',
+chr:'PHONG cúi đầu, sau đó đặt tay lên vai em — cử chỉ y hệt cảnh 4 nhưng giờ mang nghĩa khác. QUANG nhìn anh, rồi nhìn về phía tấm ảnh, rồi thở dài.',
+env:'Hành lang trong nhà, hẹp, treo thêm ảnh gia đình hai bên — họ bị vây bởi hình ảnh của chính mình.',
+lit:'Đèn hành lang ấm yếu ở trên đầu, tạo hốc mắt tối. Ánh sáng phòng khách xa hơn, lạnh hơn, ở cuối hành lang như một điểm đến.',
+col:'Nâu vàng bị nén, tối hơn hẳn mọi cảnh trước trong nhà. Hồi một đóng lại bằng tông tối.',
+cam:'32mm, máy đặt cuối hành lang, nén hai người vào giữa. Không cắt — một shot duy nhất cho cả cuộc thoại.',
+p:'Cinematic film still, a narrow domestic hallway at night. Two Vietnamese brothers stand facing slightly away from each other: the older, about 35, head lowered, hand placed on the younger brother\'s shoulder; the younger, about 30, facing camera, sighing. Family photographs line both walls. Deep in the background at the end of the hallway, a living room door ajar reveals a printed photo of an abandoned school glowing on a table. Weak warm overhead hallway light carving dark eye sockets, compressed brown-gold palette, darker than any earlier interior. Anamorphic 2.39:1, 32mm, locked-off, 35mm film grain.'},
+{n:10,act:'act2',t:'Cánh cổng và ô cửa sổ tầng ba',slug:'NGOẠI – CỔNG TRƯỜNG BỎ HOANG – CHIỀU',g:'#C4753A',
+vis:'Establishing shot của phản diện thật của phim: ngôi trường. Nó phải to hơn con người một cách vô lý. Và ở cuối cảnh, cú jump-scare đầu tiên là loại rẻ nhất mà lại đúng nhất: một cô gái đứng sau kính, chớp mắt thì mất.',
+comp:'Wide cực rộng: cổng sắt cao chiếm hai bên khung, đoàn phim nhỏ xíu ở dưới, khối nhà trường chiếm 2/3 trên. Chèn: cận Quang nhìn lên, rồi POV tầng ba — một ô cửa sổ tối om giữa hàng cửa sổ, có một hình người mờ sau kính bẩn.',
+chr:'QUANG kéo nhẹ cổ áo — cử chỉ nhỏ duy nhất báo hiệu anh cảm được cái lạnh. PRODUCER đọc bảng lịch, tay chỉ trỏ khu vực. Cả đoàn bận rộn, không ai nhìn lên.',
+env:'Cổng sắt cao phủ rỉ sét, khu trường bị dây leo nuốt gần hết, tường loang lổ, kính vỡ, sân đầy lá mục. Xe tải thiết bị đậu ngoài.',
+lit:'Nắng chiều gắt chếch từ sau lưng ngôi trường — trường thành khối tối ngược sáng, các ô cửa sổ thành những hố đen. Bụi lơ lửng trong tia nắng qua tán cây.',
+col:'Cam đất, gạch mòn, xanh rêu, và một vùng bóng tối lam lạnh trong hành lang. Đây là cảnh chuyển tông: ấm ngoài, lạnh trong.',
+cam:'Crane/drone hạ chậm từ nóc nhà xuống cổng, rồi lock-off. Cú POV tầng ba dùng 100mm cầm tay, hơi lệch focus — như một ánh nhìn không chắc chắn.',
+p:'Cinematic film still, extreme wide shot of an abandoned Vietnamese arts school at late afternoon. A tall rusted iron gate frames both edges; a small film crew and their truck look tiny at the bottom; the derelict school building fills the upper two thirds, swallowed by vines, walls stained and peeling, windows broken. Harsh low afternoon sun behind the building turns it into a backlit dark mass with black window holes, dust floating in the light shafts. Third floor: one dark window with the faint pale figure of a young woman behind dirty glass. Earthy orange, worn brick, moss green, cold blue interior shadow. Anamorphic 2.39:1, 24mm, 35mm film grain.'},
+
+{n:11,act:'act2',t:'Trẻ con cũng đi à?',slug:'NGOẠI – SÂN TRƯỜNG – CHIỀU',g:'#B0763C',
+vis:'Giới thiệu phản diện mà khán giả không biết là phản diện. Toàn bộ cảnh này được đạo diễn bằng eyeline: ánh mắt ông dừng ở Trang một thoáng, rồi ở Bon — lâu hơn. Xem lại lần hai, cảnh này đổi nghĩa hoàn toàn.',
+comp:'Bảo vệ bước ra từ nền sâu, đi từ tối ra sáng. Máy đặt sau vai đoàn phim, để ông tiến về phía ống kính. Ba shot chèn quan trọng: eyeline ông → Trang (ngắn), eyeline ông → Bon (giữ lâu hơn hai nhịp), và Bon nhìn lại ông không sợ.',
+chr:'BẢO VỆ (~52) gầy, da sạm, đồng phục cũ bạc, mặt gần như không biểu cảm — rồi khẽ mỉm cười đúng lúc nhìn Bon. Nụ cười đó phải hơi lệch. PRODUCER chủ động bắt tay, thân thiện, hoàn toàn không đọc được gì.',
+env:'Sân trường rộng, gạch nứt, cỏ mọc qua khe, cột bóng rổ gãy, sân khấu ngoài trời đã sập một góc. Thiết bị đoàn phim đang dựng rải rác.',
+lit:'Nắng chiều thấp ngang mặt, tạo bóng đổ rất dài trên sân — bóng của bảo vệ dài hơn và tới gần Bon trước cả người ông.',
+col:'Cam chiều, be gạch, xanh cỏ úa. Ấm nhưng bóng đã dài.',
+cam:'50mm, máy ngang tầm mắt. Các eyeline dùng cận 85mm. Một chi tiết: khi ông nhìn Bon, cắt sang shot bóng đổ chạm chân cậu bé.',
+p:'Cinematic film still, courtyard of an abandoned Vietnamese school in late afternoon. A thin weathered Vietnamese man about 52 in a faded old security guard uniform walks out of deep shadow toward camera, expression almost blank with a slightly off half-smile. A friendly producer about 35 reaches out to shake his hand. Behind them, a film family group including a tall young woman and a 2-year-old boy. Cracked paving, grass through the cracks, a broken basketball hoop, a partly collapsed outdoor stage. Low raking sunlight casting very long shadows across the courtyard, the guard\'s shadow reaching the child before he does. Warm orange and faded green. Anamorphic 2.39:1, 50mm, 35mm film grain.'},
+
+{n:12,act:'act2',t:'Hai mươi mốt năm rồi',slug:'NỘI – HÀNH LANG TRƯỜNG – CHIỀU',g:'#8E7B58',
+vis:'Cảnh exposition mà không được phép nhàm: lịch sử ngôi trường được kể trong lúc di chuyển, và câu trả lời của bảo vệ ngắn dần theo từng câu hỏi. Kết cảnh là hai chi tiết đắt: những dấu tay sạch trên cửa đầy bụi, và giọng nữ "Cứu tôi".',
+comp:'Hành lang một điểm tụ, dài hun hút, bảo vệ đi trước dẫn đoàn — ông luôn ở giữa đường tụ, nghĩa là ông là người kiểm soát. Chèn cận: dãy ảnh học sinh biểu diễn trên tường, rồi ảnh một cô gái trẻ đứng trên sân khấu (khuôn mặt phải khiến khán giả liên tưởng đến Trang). Chèn cận: dấu tay sạch giữa mặt cửa gỗ đầy bụi.',
+chr:'BẢO VỆ trả lời cụt dần: "Ừ." Ánh mắt ông thay đổi rất nhẹ khi nhìn bức ảnh cô gái — chỉ một nhịp. TRANG dừng lại trước bức ảnh, nói "Cô này đẹp thật." QUANG là người phát hiện dấu tay, và là người nghe giọng nữ.',
+env:'Hành lang dài, cửa kính vỡ, ảnh học sinh trong đồng phục treo hai bên đã ngả vàng, đồng hồ cũ trên tường đứng kim, cửa gỗ mục cuối hành lang, phòng ký túc xá đầy giường tầng và mạng nhện.',
+lit:'Nắng cuối ngày lọt qua ô cửa kính vỡ thành từng khối sáng đứt đoạn trên nền hành lang — nhân vật đi qua sáng, tối, sáng, tối. Bụi thấy rõ trong mỗi khối sáng.',
+col:'Vàng bụi, nâu gỗ mục, xanh xám của mảng tối giữa các khối sáng. Đây là lần cuối phim còn ánh sáng tự nhiên trong nhà.',
+cam:'Steadicam lùi 32mm dẫn trước đoàn — máy đi trước họ, như đang chờ. Cận dấu tay dùng macro 100mm. Khi có giọng "Cứu tôi", máy đứng yên hoàn toàn.',
+p:'Cinematic film still, long one-point-perspective corridor inside an abandoned Vietnamese arts school, late afternoon. A thin weathered guard in a faded uniform leads a small group down the center of the vanishing point. Yellowed framed photographs of uniformed student performers line both walls; a stopped old clock hangs above. Last daylight cuts through broken windows into hard interrupted blocks of light on the floor, thick dust visible in each shaft, deep grey-blue shadow between them. At the far end, a dusty wooden door. Dusty yellow, rotting brown wood, cold grey shadow. Anamorphic 2.39:1, 32mm, steadicam, 35mm film grain.'},
+
+{n:13,act:'act2',t:'Vậy tại sao họ lại tìm đúng nhà mình?',slug:'NGOẠI – QUÁN ĂN VẶT GẦN TRƯỜNG – CHẠNG VẠNG',g:'#7E6A55',
+vis:'Cảnh thật nhất của hồi hai và là cảnh duy nhất hai anh em nói thật với nhau. Kinh dị được thay bằng một thứ đáng sợ hơn: một câu hỏi không ai trả lời được.',
+comp:'Hai anh em ngồi hai bên bàn nhựa thấp, máy ngang mặt bàn — thấy khói nồi nước dùng bò qua giữa họ. Nền sâu: cổng trường qua hàng cây, mờ. Cuối cảnh, rack focus từ mặt Quang ra ô cửa sổ tầng hai đang mở, rèm lay.',
+chr:'QUANG ăn rất nhanh lúc đầu (dùng vị giác át cái lạnh), rồi đặt đũa xuống và không ăn nữa — vòng cung cảm xúc của cảnh nằm trong bát đồ ăn. PHONG siết hai bàn tay trước khi thú nhận, cười khổ khi nói "vì anh không muốn mọi người nhìn anh như một thằng thất bại".',
+env:'Quán vặt đơn sơ ven đường: nồi nước dùng sôi lục bục, ghế nhựa đỏ, bàn thấp, một bóng đèn tròn treo dây, tường tôn. Sau lưng là con đường vắng và cổng trường.',
+lit:'Một bóng đèn tròn trần trụi treo trên đầu — nguồn sáng cứng, nhỏ, tạo hốc mắt và làm khói phát sáng. Ngoài vùng đèn là chạng vạng lam đang tắt nhanh.',
+col:'Vàng đèn dây tóc trên nền lam chạng vạng. Đối lập nhiệt độ màu gay gắt nhất phim: một quầng ấm bé xíu bị bao vây bởi màu lạnh.',
+cam:'Tĩnh 65mm, hai cận đối. Không handheld — cảnh này cần đứng yên để thoại nặng. Rack focus cuối cảnh là chuyển động duy nhất.',
+p:'Cinematic film still, a bare roadside street-food stall at blue-hour dusk in Vietnam. Two Vietnamese brothers, about 30 and about 35, sit facing each other at a low plastic table on red plastic stools, a bowl of steaming food between them, broth steam drifting across frame. A single bare hanging bulb directly above is the only light source, hard and small, carving dark eye sockets and making the steam glow. Beyond the tiny warm pool of light, fast-fading cold blue dusk, an empty road and the silhouette of a school gate through trees. Tungsten yellow against deep dusk blue. Anamorphic 2.39:1, 65mm, locked-off, 35mm film grain.'},
+
+{n:14,act:'act2',t:'Nó đang chờ các cậu làm thay nó',slug:'NGOÀI CỔNG TRƯỜNG – CHIỀU MUỘN',g:'#A86A34',
+vis:'Nhân vật hay nhất phim bước vào, và ông không bước vào như một pháp sư — ông bước vào như một người đã tìm suốt hai mươi mốt năm và vừa nhận ra mình tìm đúng chỗ. Toàn bộ sức mạnh của cảnh nằm ở việc ông không nhìn ai, chỉ nhìn khu nhà cuối sân.',
+comp:'Ông lão đứng ngoài cổng, cổng sắt chia khung thành những dải dọc — ông bị đóng khung sau các thanh sắt. Máy hơi low angle nhìn lên ông, sau lưng ông là con đường vắng đang tắt sáng. Reverse: POV ông nhìn lên tầng ba, ô cửa sổ tối.',
+chr:'LÃO ĐẠO SĨ (~72) áo vải nâu sẫm, quần rộng, dép đơn giản, túi vải bạc màu trên tay. Đứng bất động. Khi nói "Tôi nói chuyện chết người", mặt không cười. Cú siết bàn tay quanh túi vải là chi tiết diễn xuất quan trọng nhất.',
+env:'Ngoài cổng, đường vắng, một xe máy vừa dừng, hàng cây rung xào xạc. Bên trong cổng, ánh đèn đoàn phim đã bắt đầu bật.',
+lit:'Nắng cuối ngày nằm ngang, đỏ sẫm, phản chiếu trên tất cả các ô cửa kính các tầng — cả ngôi trường như đang đỏ mắt. Mặt ông lão nửa sáng nửa tối.',
+col:'Đỏ sẫm hoàng hôn trên kính, nâu áo vải, xám sắt rỉ. Đỏ xuất hiện lần đầu ở đây — và nó là màu của nghi lễ.',
+cam:'40mm low angle cho ông lão. Khi ông bước qua cổng, máy pan theo và các thanh sắt quét qua ống kính — nhân vật đi từ ngoài vào trong một cái lồng.',
+p:'Cinematic film still, outside the rusted iron gate of an abandoned Vietnamese school at late golden hour. A gaunt Vietnamese man about 72 in a dark brown cloth shirt, loose trousers and simple sandals stands motionless holding a faded cloth bag, gripping it tightly. The vertical gate bars frame him in strips. Slight low angle. Behind him an empty road and a parked motorbike, trees rustling. Behind the gate, the school\'s windows on every floor reflect deep red sunset light, as if the whole building has red eyes. His face is half lit, half in shadow. Deep sunset red, cloth brown, rusted grey. Anamorphic 2.39:1, 40mm, 35mm film grain.'},
+
+{n:15,act:'act2',t:'Đủ lâu để trời sáng',slug:'SÂN TRƯỜNG – CHIỀU TỐI',g:'#6F6A52',
+vis:'Luật của phim được thiết lập bằng hành động, không bằng thoại: một đường muối trắng rắc trước cửa. Và kết cảnh là khoảnh khắc đắt nhất hồi hai — ông lão nghe vài nốt hát vọng ra, và một giọt nước mắt chảy xuống. Khán giả chưa hiểu, ông thì hiểu.',
+comp:'Cận đường muối trắng rơi xuống nền gạch tối, đây là shot phải đẹp — muối trắng là thứ sáng nhất trong khung. Wide: ông lão đứng giữa sân, đoàn phim đi qua nền sau, không ai nhìn ông. Cuối cảnh: cận ông lão bất động, mắt hướng tầng ba, một giọt nước mắt.',
+chr:'LÃO ĐẠO SĨ động tác chậm, chắc, không nghi thức hoa lá — ông làm việc như thợ. Khi phát bùa, ông nhìn từng người, đếm. QUANG cất bùa vào túi áo rất cẩn thận, gật đầu rất nhanh — nét hài duy nhất giữa cảnh nặng.',
+env:'Sân trường lúc mặt trời gần khuất. Dây điện đoàn phim bò dọc hành lang, đèn quay dựng ở các góc sân, camera cố định hướng vào khu ký túc xá.',
+lit:'Chuyển tiếp: nửa khung còn nắng tàn cam, nửa khung đã là đèn quay trắng lạnh của đoàn phim. Hai hệ thống ánh sáng đang tranh nhau — ánh sáng tự nhiên đang thua.',
+col:'Cam tàn, xanh xám, và trắng muối. Cảnh cuối cùng còn ánh sáng ban ngày trong phim.',
+cam:'Cận muối dùng macro. Wide 32mm. Cận ông lão 85mm, giữ rất lâu, không cắt khi tiếng hát tắt — để khán giả nhìn mặt ông trong im lặng.',
+p:'Cinematic film still, school courtyard at last light. A gaunt Vietnamese man about 72 in a dark brown cloth shirt stands alone at the center, scattering a thin line of white salt onto dark cracked paving; the salt is the brightest thing in frame. Behind him, film crew cables running along a corridor, work lights on stands, a fixed camera aimed at a dormitory block, crew walking past without looking at him. Half the frame still holds dying orange sunlight, half is already lit by cold white crew lamps. Faded orange, grey-green, salt white. Anamorphic 2.39:1, 32mm, 35mm film grain.'},
+
+{n:16,act:'act2',t:'Nhạt',slug:'PHÒNG ĂN TẠM – TỐI',g:'#8A6A3E',
+vis:'Bữa ăn cuối cùng cả nhà còn đủ. Và trong lúc mọi người cười, có hai người không ăn: bảo vệ đứng cuối bàn nhìn Trang rồi nhìn Bon, và ông lão nói một chữ — "Nhạt." Cảnh này phải vui thật, để cái sai chạy ngầm bên dưới.',
+comp:'Bàn dài, máy đặt ở đầu bàn, nhìn dọc xuống — bố cục bữa tiệc kinh điển. Nhưng ở cuối bàn, trong vùng tối ngoài quầng đèn, có một hình người đứng: bảo vệ. Anh ta luôn nằm ngoài focus, ở rìa khung, trong mọi shot của cảnh.',
+chr:'BON lắc đầu, "Không ngon", "Con biết" — nét hài của trẻ con. LÃO ĐẠO SĨ gắp một miếng, ăn, im lặng, rồi nói "Nhạt" — timing phải khô. BẢO VỆ không ăn, không nói, ánh mắt dừng lâu trên Trang rồi Bon, sau đó quay đi.',
+env:'Phòng ăn tạm dựng trong trường: bàn dài phủ khăn nhựa, cơm thịt rau canh bày kín, đèn quay treo tạm phía trên, tường vẫn là tường trường bỏ hoang.',
+lit:'Một dàn đèn practical treo thấp trên bàn — quầng sáng ấm gói lấy bàn ăn và cắt đứt ở rìa. Ngoài quầng đó là đen. Đây là cấu trúc sáng của cả hồi ba: một quầng ấm bị bao vây.',
+col:'Vàng ấm trên bàn, đen quanh mép. Không màu lạnh — nhưng cũng không còn đường ra.',
+cam:'Wide 35mm dọc bàn, tĩnh. Cận ông lão và Bon 65mm. Một shot quan trọng: cận Bon, và trong nền mờ phía sau là hình bảo vệ đứng nhìn.',
+p:'Cinematic film still, a long makeshift dining table set up inside an abandoned school at night. Camera at the head of the table looking down its length; a Vietnamese family and crew eating and laughing, plates of rice, meat, greens and soup. A gaunt old man about 72 in a brown cloth shirt sits eating in silence. At the far dark end of the table, outside the pool of light and out of focus, a thin man in a faded security uniform stands watching. Low practical lamps above the table create a warm circle of light that cuts hard to black at the edges. Warm yellow center, pure black surround. Anamorphic 2.39:1, 35mm, locked-off, 35mm film grain.'},
+
+{n:17,act:'act2',t:'Con gái tôi',slug:'QUÁN GÀ NHỎ VEN ĐƯỜNG – TỐI',g:'#B08040',
+vis:'Cảnh làm khán giả yêu ông lão. Một xô gà rán trên bàn nhựa, và giữa đó là lời thú nhận: ông không đi trừ tà, ông đi tìm con. Rồi cú scare tốt nhất của hồi hai — cô gái xuất hiện trong phản chiếu cửa kính, không phải sau lưng.',
+comp:'Hai người đối diện qua bàn nhựa, xô gà ở giữa — bố cục ấm, thân, gần như hài. Cú chốt: máy đặt sao cho cửa kính quán nằm sau vai Quang, và khi đèn xe quét qua, trong phản chiếu hiện một cô gái tóc dài váy trắng đứng ngay sau anh. Trong khung hình thật, chỗ đó trống.',
+chr:'LÃO ĐẠO SĨ xé một miếng gà, không trả lời ngay — nhịp im lặng là tính cách. Khi nói "Con gái tôi", ánh mắt dịu xuống lần đầu. Cận bàn tay ông: già nua, run nhẹ. QUANG đặt miếng gà xuống khi nghe "Hai mươi mốt năm rồi".',
+env:'Quán gà nhỏ ven đường: bàn nhựa, đèn tuýp trắng, xô gà giấy, tường ốp gạch men, cửa kính lớn ra mặt đường có xe chạy.',
+lit:'Đèn tuýp trắng trần trụi từ trên — lạnh, phẳng, không thẩm mỹ, rất thật. Đèn xe quét ngang mặt hai người theo chu kỳ. Chính một cú quét đó tiết lộ phản chiếu.',
+col:'Trắng xanh của đèn tuýp, vàng của gà rán, đen của mặt đường ngoài kính. Trắng lạnh này báo trước tông của hồi ba.',
+cam:'Tĩnh 50mm hai cận. Cú phản chiếu phải là một shot duy nhất, không cắt: đèn xe quét → thấy cô gái trong kính → Quang quay phắt lại → trống. Không zoom, không nhạc nhấn.',
+p:'Cinematic film still, a small roadside fried chicken shop at night in Vietnam. A gaunt Vietnamese man about 72 in a brown cloth shirt sits across a plastic table from a man about 30, a paper bucket of fried chicken between them. Bare white fluorescent tube overhead, cold flat unglamorous light, tiled walls. Behind the younger man\'s shoulder, a large plate-glass window onto the street; passing headlights sweep across their faces, and in the glass reflection stands a young woman with long black hair in a simple white dress directly behind him, while the real space there is empty. Cold fluorescent white, fried gold, black road outside. Anamorphic 2.39:1, 50mm, locked-off, 35mm film grain.'},
+{n:18,act:'act3',t:'22:47',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#2F4A54',
+vis:'Cảnh mở đêm phải thiết lập ba thứ cùng lúc: cấu trúc không gian (giường sắt hai hàng, vòng muối quanh mỗi người), format found-footage (timecode, đèn báo đỏ), và luật của cú scare (mỗi âm thanh nhỏ hơn cú trước, nhưng gần hơn). Kết cảnh bằng cú lạnh nhất: vòng muối quanh Trang đã bị kéo dài ra ngoài, như có ai vừa bò qua.',
+comp:'Wide đối xứng từ đầu phòng: hai hàng giường sắt chạy về điểm tụ, mỗi người nằm trong một vòng muối trắng — bố cục như một nghi lễ mà chưa ai biết. Overlay timecode góc dưới và đèn đỏ nhấp nháy. Chèn: cận vòng muối bị kéo lệch, dấu muối lê dài ra giữa phòng.',
+chr:'QUANG nằm mở mắt, chỉ có mắt di chuyển. Cả phòng ngủ. BON ngủ ngon trong vòng muối của Duyên. LÃO ĐẠO SĨ nằm ở góc phòng, tưởng như ngủ. Cuối cảnh: TRANG ngồi dậy, lưng quay lại, tóc xõa.',
+env:'Phòng ký túc xá trần cao, giường sắt cũ hai hàng, tủ gỗ mục, mạng nhện góc trần, quạt cũ quay cạch cạch, cửa sổ lớn không kính.',
+lit:'Chỉ ánh trăng lam qua khung cửa sổ lớn, in bóng khung cửa lên nền gạch bụi. Cộng đèn báo đỏ của camera nhấp nháy — hai nguồn, cả hai đều không ai điều khiển được.',
+col:'Lam lục của trăng, trắng của muối, một điểm đỏ nhấp nháy. Bảng màu hồi ba chốt tại đây và không đổi nữa.',
+cam:'Lock-off hoàn toàn — đây là camera cố định của đoàn phim, nên máy không được phép động. Sự bất động là thứ tạo áp lực. Chèn cận thì dùng handheld để phân biệt "máy đoàn phim" và "máy phim".',
+p:'Cinematic film still, large abandoned dormitory room at night, high ceiling. Two rows of old iron bunk beds receding to a vanishing point; a Vietnamese family sleeping, each person lying inside a white circle of salt drawn on the dusty tile floor. A man about 30 lies awake, eyes open. In the corner, a gaunt old man in brown cloth. Moonlight blue-green through a large glassless window prints the window frame onto the dusty floor; a small blinking red camera light. On-screen timecode overlay 22:47 in the corner. Cold blue-green, salt white, one red blinking point. Anamorphic 2.39:1, 28mm, locked-off surveillance framing, 35mm film grain.'},
+
+{n:19,act:'act3',t:'Đôi mắt trắng hoàn toàn',slug:'PHÒNG KÝ TÚC XÁ – LIÊN TỤC',g:'#26414B',
+vis:'Reveal đầu tiên và nó phải sạch: tóc tách sang hai bên, mắt trắng không đồng tử. Rồi tiếng hát. Cái đáng sợ không phải mắt — mà là cách cô đứng, cách cô lấy hơi, cách cô nghiêng đầu đều thuộc về người khác.',
+comp:'Trang đứng chính giữa phòng, chính giữa khung, thấp hơn tầm mắt máy một chút để cô lọt vào giữa hai hàng giường. Mọi người ở tiền cảnh hai bên, mờ, thành khung tối. Cận Trang: 85mm, mắt trắng chiếm tâm khung. Cắt ngược sang cận ông lão — hai mắt đỏ lên, tay che miệng.',
+chr:'TRANG mắt trắng dã, mặt không biểu cảm, tư thế và hơi thở của một ca sĩ được đào tạo — không phải của Trang. LÃO ĐẠO SĨ nhận ra giai điệu, và đó là lúc phim cho khán giả biết ông đã mất gì.',
+env:'Vẫn phòng ký túc, giờ mọi người đã dậy, chăn xô lệch. Bụi bị đánh lên trong không khí bởi chuyển động.',
+lit:'Trăng lam giờ được đặt như một key sáng đúng vào mặt Trang từ phía cửa sổ, hai bên má tối. Cả phòng còn lại tối hơn một stop so với cảnh 18.',
+col:'Lam lục sâu hơn, và da Trang bị đẩy về trắng xám — cô đang mất màu người.',
+cam:'Máy bắt đầu rời chế độ lock-off: một cú dolly-in rất chậm về phía Trang trong lúc cô hát. Đây là lần đầu "máy phim" thắng "máy đoàn phim".',
+p:'Cinematic film still, abandoned dormitory at night. A tall Vietnamese woman about 27 with long black hair stands dead center between two rows of iron beds, her hair parted away from her face, her eyes completely white with no pupils, expression blank, posture and breathing of a trained singer. Family members in the dark blurred foreground on both sides frame her. Moonlight from the window is the key light on her face, cheeks falling into shadow, the rest of the room a stop darker. Her skin pushed toward grey-white. Deep blue-green palette. Anamorphic 2.39:1, 85mm, very slow dolly-in, 35mm film grain.'},
+
+{n:20,act:'act3',t:'Ông lão hát theo',slug:'PHÒNG KÝ TÚC XÁ – LIÊN TỤC',g:'#1F3841',
+vis:'Cảnh khiến khán giả mất chỗ đứng: người duy nhất được coi là chuyên gia thì bắt đầu cười, khóc, và hát theo. Còn cả nhà thì mắt chuyển trắng. Chỉ còn Quang tỉnh — và vòng muối của anh còn nguyên. Điểm bám của khán giả bị thu về đúng một người.',
+comp:'Wide: Trang ở giữa, cả nhà xếp quanh như khán giả trong một khán phòng, tất cả bất động, mắt trắng. Ông lão bước ra khỏi vòng muối — chèn cận bàn chân ông vượt qua đường muối trắng, đó là shot mang thông tin. Quang ở tiền cảnh, còn trong vòng, là người duy nhất còn đổ bóng bình thường.',
+chr:'LÃO ĐẠO SĨ cười rất nhỏ rồi lớn dần trong lúc nước mắt vẫn chảy — hai biểu cảm xung đột trên một mặt. Giọng nam trầm khàn khớp hoàn toàn với giai điệu. Trong tay ông xuất hiện thanh kiếm gỗ đào (bản thảo gốc viết "kéo gỗ" — nên chốt là kiếm cho khớp cảnh 21).',
+env:'Phòng ký túc, bảy người bất động, quạt cũ vẫn quay. Không khí đặc bụi.',
+lit:'Giảm dần: các nguồn practical của đoàn phim bắt đầu tắt/nhấp nháy, chỉ còn trăng. Ông lão bước vào vùng tối rồi lại ra sáng khi tiến về phía Trang.',
+col:'Lam gần đơn sắc. Ở tay ông, gỗ đào sẫm là điểm ấm duy nhất trong khung.',
+cam:'Handheld, bắt đầu run nhẹ theo hơi thở Quang — POV cảm xúc chuyển hẳn về anh. Kết cảnh: whip pan theo ông lão lao tới.',
+p:'Cinematic film still, abandoned dormitory at night. A tall young Vietnamese woman stands singing at the center, eyes fully white. Around her, six family members stand or sit completely motionless, their eyes also turned white, arranged like an audience. A gaunt old Vietnamese man about 72 has stepped across his white salt circle and walks toward her, tears running down his face while he smiles and sings along, holding an old dark peachwood sword with faded red characters. In the foreground, one man about 30 remains inside his intact salt circle, the only figure casting a normal shadow. Near-monochrome moonlit blue, the dark wood sword the only warm note. Anamorphic 2.39:1, 40mm, handheld, 35mm film grain.'},
+
+{n:21,act:'act3',t:'Linh hồn bế Bon xuyên qua tường',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#1B333C',
+vis:'Cảnh lớn nhất hồi ba. Hai chuyển động phải rõ ràng: linh hồn Trang tách ra khỏi thân xác (thân xác vẫn đứng, mắt nhắm), rồi bế Bon bay xuyên tường. Và phải giữ được điều quan trọng nhất: linh hồn không hung dữ — cô chỉ buồn đến tuyệt vọng.',
+comp:'Ba lớp phải thấy trong một khung: thân xác Trang đứng bất động, linh hồn Trang đã bước ra phía trước, và Bon đang lơ lửng rời khỏi giường. Duyên lao tới, bàn tay xuyên qua người con — cận bàn tay đi qua là shot chốt. Kết: linh hồn và Bon xuyên tường, để lại một vệt sương trắng kéo dài.',
+chr:'LINH HỒN TRANG trắng nhợt, mờ trong suốt, khuôn mặt chỉ có nỗi buồn. THÂN XÁC TRANG đứng, mắt nhắm, không thở. LÃO ĐẠO SĨ bị Phong–Duyên–Cha giữ lại, kiếm gỗ đào đã vung ngang cách Trang vài centimet. BON không tỉnh, người mềm, lơ lửng.',
+env:'Phòng ký túc, một làn sương trắng dày dần từ chân Trang lan ra nền. Bức tường gạch cũ ở cuối phòng là điểm đến.',
+lit:'Linh hồn là nguồn sáng — self-illuminated, trắng lạnh, hắt sáng lên mặt những người quanh cô. Đây là lần đầu trong phim ánh sáng đến từ một nhân vật.',
+col:'Trắng linh hồn trên lam đen. Độ tương phản cao nhất của hồi ba.',
+cam:'Máy hạ thấp, low angle nhìn lên khi hai người bay lên — để họ chiếm trời. Kết bằng một cú lock-off vào bức tường trống, giữ ba giây sau khi tiếng hát tắt.',
+p:'Cinematic film still, abandoned dormitory at night. Three layers in one frame: a tall young Vietnamese woman\'s body stands motionless with eyes closed; a translucent pale white spirit identical to her has stepped out in front of the body; a sleeping 2-year-old boy floats limply off a bed toward the spirit. A woman lunges forward and her hand passes through the child. A gaunt old man is restrained by three family members, an old peachwood sword swung mid-air. Thick white mist spreading across the floor. The spirit is self-illuminated, cold white, casting light up onto the faces around her. Spirit white against black-blue. Anamorphic 2.39:1, 32mm, low angle, 35mm film grain.'},
+
+{n:22,act:'act3',t:'Nắm muối đầu tiên',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#243D46',
+vis:'Quang tỉnh lại một mình giữa bảy người bất động — đây là hình ảnh cô độc nhất phim. Và đây là cảnh anh lần đầu hành động thay vì phản ứng: hất muối để cứu cả nhà. Kết cảnh gieo hạt cho địa đạo: những vết xước sâu trên nền, và bên dưới lớp bụi là vệt màu nâu đã khô.',
+comp:'Wide từ nền nhà lên: Quang ngồi giữa phòng, sáu người nằm bất động quanh anh ở các hướng khác nhau — bố cục như một hiện trường. Chèn: cận nắm muối bay khỏi tay, hạt muối bắt ánh trăng. Chèn cuối: cận nền — vết xước sâu kéo lê, tay phủi bụi, vệt nâu khô hiện ra.',
+chr:'QUANG đầu đau, chưa hoàn hồn, rồi chuyển sang khẩn cấp. Anh không chạm vào vệt nâu — chi tiết nhỏ này cho thấy anh đã bắt đầu hiểu luật của nơi này. PHONG giật bắn khi trúng muối, phản ứng đầu tiên là "Hả?!" — nét thật.',
+env:'Phòng ký túc, giường Trang và giường Bon đều trống. Túi muối lăn dưới nền. Nước rỉ đâu đó, tích tích.',
+lit:'Trăng vẫn là nguồn duy nhất, nhưng góc đã đổi — bóng khung cửa đã dịch trên nền, cho khán giả biết thời gian đã trôi.',
+col:'Lam lạnh, và lần đầu xuất hiện nâu đỏ (vệt khô trên nền) — màu nghi lễ đã ở trong phòng suốt từ đầu.',
+cam:'Handheld, hơi thấp, theo Quang. Chèn cận nền dùng macro với đèn pin điện thoại làm nguồn — nguồn sáng do nhân vật cầm, không còn của đoàn phim.',
+p:'Cinematic film still, abandoned dormitory at night. A Vietnamese man about 30 kneels at the center of the room, six family members lying motionless around him in different directions like a crime scene. He is throwing a handful of salt into the air; the grains catch the moonlight. Two beds are empty. A spilled salt bag on the floor. Moonlight through the window is the only source, the window\'s shadow shifted to a new angle on the dusty floor. Deep drag-marks scratched into the tiles nearby, dried dark brown stains showing under wiped dust. Cold blue with the first appearance of dried red-brown. Anamorphic 2.39:1, 35mm, handheld, 35mm film grain.'},
+
+{n:23,act:'act3',t:'Nó không biết. Nó nhớ.',slug:'PHÒNG KÝ TÚC XÁ – ÍT PHÚT SAU',g:'#2A424B',
+vis:'Luật siêu nhiên của phim được thiết lập bằng một đạo cụ nhỏ và một câu thoại: một mảnh giấy vàng với vệt đen mảnh như sợi tóc, tự bò. Cảnh này phải quay như một thí nghiệm, không như một phép thuật — càng cụ thể càng đáng tin.',
+comp:'Top-down (máy thẳng từ trên xuống) vào mảnh giấy vàng trên nền gạch bụi — bố cục phẳng, trung tâm, như trang thí nghiệm. Vệt đen bò lệch về một hướng, tạo một mũi chỉ hướng trong khung. Cắt sang wide: cả nhóm ngồi quây quanh, tất cả cùng nhìn vào một điểm nhỏ trên sàn.',
+chr:'LÃO ĐẠO SĨ ngồi xuống nền, đặt kiếm gỗ đào bên cạnh, niệm chú — giọng trầm thấp, đều, không kịch tính. QUANG nhìn chăm chú, mặt của người đang học. DUYÊN không rời mắt khỏi vệt đen.',
+env:'Phòng ký túc, giữa nền, một vòng người. Không khí trong phòng lạnh xuống thấy được — hơi thở bắt đầu thành khói mỏng.',
+lit:'Đèn pin đặt xuống nền chiếu ngang, làm mảnh giấy vàng nổi bật và đổ bóng dài của cả nhóm lên tường. Bóng người trên tường to gấp ba người thật.',
+col:'Vàng của giấy bùa là điểm ấm duy nhất trong biển lam. Vệt đen là điểm tối nhất. Toàn cảnh gần như đơn sắc quanh hai điểm đó.',
+cam:'Top-down lock-off cho mảnh giấy. Wide 32mm cho nhóm. Khi vệt đen bắt đầu bò, không cắt — một shot dài, để khán giả tự thấy nó chuyển động.',
+p:'Cinematic film still, abandoned dormitory floor at night. Overhead top-down shot of a small yellow talisman paper lying on dusty tiles, a thin black hair-like streak crawling slowly across it in one direction, an old dark peachwood sword laid beside it. Flashlights placed on the floor rake light sideways, making the yellow paper glow and throwing the group\'s shadows huge across the wall. A gaunt old Vietnamese man sits chanting low, a small family group crouched in a circle around the paper, breath faintly misting in cold air. Near-monochrome cold blue with one warm yellow accent. Anamorphic 2.39:1, top-down and 32mm wide, 35mm film grain.'},
+
+{n:24,act:'act3',t:'Cánh cửa sắt dưới lớp nền',slug:'HÀNH LANG KÝ TÚC XÁ – ĐÊM',g:'#20353D',
+vis:'Cảnh di chuyển và cũng là cảnh cho khán giả thấy quy tắc của mảnh hồn hoạt động: đến ngã rẽ nó dừng vài giây, như đang nhớ đường. Song song, ông lão đặt tay lên tường và thấy hai ký ức — đó là cách phim kể quá khứ mà không cần flashback dài.',
+comp:'Hành lang tối, nhóm người chỉ còn là những silhouette có đèn pin. Máy đi phía trước, lùi. Chèn ký ức: hai hình ảnh rất ngắn, khung 1.33 hoặc khác grain hẳn — một cô gái nắm tay đứa trẻ đang chạy, một người đàn ông trẻ mở một cánh cửa và bước xuống. Kết: ông lão quỳ phủi bụi, một đường viền chữ nhật lộ dần trên nền.',
+chr:'LÃO ĐẠO SĨ nhắm mắt khi chạm tường — cận mặt ông trong khoảnh khắc thấy ký ức. Bàn tay ông run nhẹ khi nói "Địa đạo". QUANG soi đèn xuống, người phát hiện tiếng rỗng.',
+env:'Hành lang khu sau trường, gần như không ánh sáng, tường tróc, rễ cây xuyên qua khe, mùi ẩm nặng. Nền gạch bụi dày.',
+lit:'Chỉ đèn pin trong tay nhân vật — nguồn sáng di động, tạo bóng quét trên tường liên tục. Ngoài quầng đèn là đen tuyệt đối, không fill.',
+col:'Lam đen với quầng trắng lạnh của đèn pin. Ký ức thì ngược lại: ấm, sáng quá, hơi cháy — quá khứ trong phim này lúc nào cũng ấm hơn hiện tại.',
+cam:'Handheld theo vai, 28mm. Ký ức dùng 50mm, khung hẹp hơn, tốc độ khác — cắt bất ngờ, không dissolve.',
+p:'Cinematic film still, a pitch-dark rear corridor of an abandoned school at night. A small group reduced to silhouettes carrying flashlights; a gaunt old Vietnamese man kneels and wipes thick dust off the floor, revealing the rectangular outline of an old iron hatch set into the tiles. Peeling walls, tree roots pushing through cracks. The only light is handheld flashlights, sweeping moving shadows across the walls; outside the beams, absolute black with no fill. Cold blue-black with white flashlight pools. Anamorphic 2.39:1, 28mm, handheld, 35mm film grain.'},
+
+{n:25,act:'act3',t:'Mùi gì vậy? — Máu.',slug:'CỬA XUỐNG ĐỊA ĐẠO – ĐÊM',g:'#1A2E35',
+vis:'Cảnh vượt ngưỡng. Cánh cửa mở, một luồng khí lạnh phả lên, và câu trả lời một chữ của ông lão đóng lại mọi hy vọng đây chỉ là chuyện tâm linh. Kết cảnh: cửa trên đầu khép lại, bóng tối nuốt tất cả — cắt sang đen hẳn một nhịp.',
+comp:'Máy đặt thấp ngang nền, nhìn ngang cánh cửa sắt bật ra — hơi lạnh bốc lên thấy được, cắt qua chùm đèn pin. Sau đó máy đặt dưới chân cầu thang, nhìn lên: bảy người lần lượt bước xuống, khung sáng hình chữ nhật trên đầu họ nhỏ dần. Shot cuối: khung sáng đó biến mất.',
+chr:'CHA cạy khóa bằng một thanh sắt — hành động, không thoại. Đây là lúc ông có việc và phải nhớ được. DUYÊN bịt mũi. LÃO ĐẠO SĨ nhìn xuống rất lâu trước khi nói "Máu", tay siết chặt đèn pin.',
+env:'Cửa sắt sát nền, ổ khóa hoen gỉ, không tay nắm. Bên dưới là bậc đá dẫn sâu, không thấy đáy. Tường hai bên cầu thang ẩm, có vệt đen kéo dài.',
+lit:'Ánh sáng duy nhất từ trên xuống qua ô cửa vừa mở — một cột sáng dọc trong bụi. Xuống càng sâu, cột sáng càng hẹp cho tới khi biến mất.',
+col:'Xám đá, đen ẩm, hơi lạnh trắng. Không một điểm ấm nào ngoài đèn pin.',
+cam:'Low ngang nền cho cú mở cửa. Cú xuống cầu thang: máy đi cuối đoàn, để khán giả thấy toàn bộ bảy người biến vào tối trước mình.',
+p:'Cinematic film still, an old iron hatch prised open flush in a dusty floor at night. Low camera at floor level; visible cold vapour rising from the opening and cutting through flashlight beams. Stone steps descend into darkness with no visible bottom, damp walls with long dark streaks. A small group stands around the hatch, one older man holding an iron bar, a woman covering her nose, a gaunt old man staring down. The only light falls from above through the opening as a narrow vertical shaft in the dust. Stone grey, damp black, cold white. Anamorphic 2.39:1, 24mm, low angle, 35mm film grain.'},
+
+{n:26,act:'act3',t:'Đừng chạy theo tiếng gọi',slug:'ĐỊA ĐẠO – ĐÊM',g:'#3A2A1E',
+vis:'Cú scare thông minh nhất phim: giọng Bon gọi "Chú Quang..." từ phía trước, và luật mới được dựng lên ngay lập tức — đừng chạy theo tiếng gọi, địa đạo này không chỉ có một người. Sau đó là một tiếng cười trẻ con trong bóng tối rồi tắt.',
+comp:'Đường hầm nén khung thành một hình chữ nhật hẹp, nhóm người xếp thành hàng dọc — bố cục một hàng, không ai đứng cạnh ai được. Mảnh hồn bay phía trước như một đốm khói đen, thấy được vì nó đen hơn cả bóng tối. Duyên định lao lên, Quang giữ tay — cận hai bàn tay.',
+chr:'LÃO ĐẠO SĨ nói rất nhỏ, không quay lại. DUYÊN mắt đỏ, thân đã nghiêng về phía trước dù chân chưa đi — body language của người sắp mất kiểm soát. QUANG lần đầu là người ra lệnh: "Khoan!"',
+env:'Đường hầm gạch cũ, hai bên có những vệt đen kéo dài, trần thấp, nước rỉ. Sâu về phía trước là đen hoàn toàn.',
+lit:'Đèn pin ngược sáng từ sau nhóm, biến họ thành silhouette có viền — ta thấy hình người mà không thấy mặt. Đó là mục đích: khán giả không đọc được ai đang nghĩ gì.',
+col:'Lần đầu địa đạo cho phép một chút ấm: đèn pin tungsten trên gạch nâu. Nhưng ấm ở đây không an toàn — nó là màu của đất.',
+cam:'85mm nén, handheld chậm. Khi có giọng Bon, máy không pan đi tìm — nó giữ nguyên trên mặt Duyên. Phim chọn phản ứng thay vì chọn nguồn âm.',
+p:'Cinematic film still, inside a narrow old brick tunnel at night. A group of people strung out in single file down a low-ceilinged passage, backlit by their own flashlights so they read as rimmed silhouettes with unreadable faces. Ahead of them floats a small wisp of black smoke, darker than the surrounding darkness. A woman leans forward as if about to run; a man holds her arm back. Long dark streaks on the brick walls, water seeping, total black deeper down the tunnel. Tungsten warmth on brown brick, but earth-warm, not safe. Anamorphic 2.39:1, 85mm compressed, handheld, 35mm film grain.'},
+
+{n:27,act:'act3',t:'Một đứa trẻ khác',slug:'ĐỊA ĐẠO – ÍT PHÚT SAU',g:'#42301F',
+vis:'Cảnh ngắn, chức năng gieo hạt: ký ức cho biết cô gái từng đưa một đứa trẻ xuống đây — và không phải Bon. Điều đó biến câu chuyện từ "cứu người" thành "hiểu chuyện gì đã xảy ra".',
+comp:'Cận cánh cửa gỗ với những ký hiệu đã mục nát chiếm gần hết khung — chi tiết bề mặt là nội dung của shot. Bàn tay già đặt lên gỗ. Cắt sang ký ức: cô gái đứng trước chính cánh cửa này, một đứa trẻ nắm tay cô, cô ngoái đầu lại vì có người đang đến.',
+chr:'LÃO ĐẠO SĨ thở mạnh sau khi mở mắt — thể chất, không kịch tính. DUYÊN run lên khi hỏi "Là Bon?", và cái lắc đầu của ông lão là một cú đánh vào cô.',
+env:'Cánh cửa gỗ trong lòng địa đạo, ký hiệu khắc đã mục, bản lề rỉ, khe cửa có nấm mốc trắng.',
+lit:'Đèn pin chiếu chếch qua mặt gỗ để nổi kết cấu chạm khắc — ánh sáng kỹ thuật, gần như khảo cổ. Ký ức thì được đánh sáng ấm và mềm hơn hẳn.',
+col:'Nâu gỗ mục, trắng nấm, đen khe. Ký ức: vàng ấm, hơi bay màu.',
+cam:'Macro cho ký hiệu. 40mm cho cửa và người. Ký ức: 50mm, handheld nhẹ, tốc độ hơi khác — nó phải cảm giác như một cuốn phim khác.',
+p:'Cinematic film still, close view of an old wooden door deep inside a brick tunnel, its carved symbols rotted and soft, hinges rusted, white mould in the seams, filling most of the frame. An aged trembling hand rests flat on the wood. Flashlight raking across the surface at a low angle to bring out the carved texture, almost archaeological lighting. Rotten brown wood, mould white, black seams. Anamorphic 2.39:1, 40mm plus macro detail, 35mm film grain.'},
+
+{n:28,act:'act3',t:'Phòng nghi lễ',slug:'PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM',g:'#5E1F1A',
+vis:'Reveal không gian quan trọng nhất phim. Vòng tròn ký hiệu trên nền, bàn đá giữa phòng, vệt máu cũ. Và cú chốt: cửa từ từ đóng, khóa lại — "Chúng ta bị phát hiện rồi." Ông lão không hề bất ngờ, đó là chi tiết làm khán giả lạnh người.',
+comp:'Shot đầu tiên phải là top-down hoặc high angle để thấy trọn vòng tròn ký hiệu — hình học của nghi lễ là nội dung. Sau đó xuống ngang tầm người: bàn đá ở tâm, nhóm người đứng rìa vòng, không ai bước vào. Kết: cửa đóng ở nền sâu sau lưng họ, Phong lao tới kéo.',
+chr:'QUANG đứng chết lặng: "Đây là..." LÃO ĐẠO SĨ quỳ, chạm vào vết máu khô, nhắm mắt — và thấy: cô gái nằm trên nền, đứa trẻ khóc, người đàn ông đứng bên đang đọc gì đó. PHONG là người kiểm tra cửa, hành động của người thực tế.',
+env:'Phòng lớn dưới lòng đất, trần thấp, tường gạch, vòng tròn ký hiệu lớn vẽ trên nền, bàn đá ở tâm với vật dụng nghi lễ đã mục, nến cháy dở từ 21 năm trước.',
+lit:'Đèn pin đồng loạt chớp tắt khi luồng gió lạnh thổi qua — có một nhịp phòng chỉ được soi bằng những cú chớp. Sau đó ổn định lại thành vài nguồn thấp, đặt xuống nền, đánh sáng vòng tròn từ dưới.',
+col:'Đỏ nâu của máu khô lần đầu chiếm khung. Gạch nâu, đá xám. Đây là cảnh đầu tiên nghi lễ định nghĩa bảng màu.',
+cam:'High angle mở màn, rồi 28mm ngang tầm. Ký ức của ông lão: cận rất gắt, cắt nhanh, ba shot, không thoại.',
+p:'Cinematic film still, a large low-ceilinged underground brick chamber. High angle showing a big ritual circle of strange symbols painted on the stone floor, partly faded, with old dried blood stains still visible; a stone altar table at its center holding rotted ritual objects and long-dead candles. A small group of people stand at the edge of the circle, none stepping in, flashlights placed on the floor lighting the circle from below. An old man kneels touching a dried blood stain. Dried blood red-brown dominating the frame, brown brick, grey stone. Anamorphic 2.39:1, 28mm, 35mm film grain.'},
+
+{n:29,act:'act3',t:'Chỉ còn thiếu một người',slug:'HÀNH LANG TRƯỜNG – CÙNG LÚC',g:'#2C3E44',
+vis:'Cảnh này là cách found footage nên được dùng: khán giả biết trước điều nhân vật chưa biết. Bảo vệ đi ngang camera, dừng, nhìn thẳng vào ống kính, rồi tắt nó. Màn hình đen. Từ giây đó, khán giả hiểu cả đêm nay đã được dàn xếp.',
+comp:'Khung hình đầu tiên PHẢI là khung camera cố định — có timecode, đèn báo đỏ, méo góc rộng, chất lượng thấp hơn. Bảo vệ đi vào từ rìa, dừng chính giữa, nhìn trực diện vào lens. Cắt đen. Rồi khung phim bình thường trở lại ở phòng điều khiển.',
+chr:'BẢO VỆ nhìn thẳng ống kính — cú duy nhất trong phim một nhân vật break the fourth wall, và nó phải để dành cho đây. Sau đó ở phòng điều khiển: đặt chai nước xuống, mỉm cười, "Mọi người mệt rồi." NHÀ SẢN XUẤT dụi mắt, chân mềm nhũn, ngã xuống ghế.',
+env:'Hành lang trường còn đèn đoàn phim. Phòng điều khiển: bàn monitor, nhiều màn hình, chai nước, ghế xoay, người gục đầu. Đồng hồ hiện 23:41.',
+lit:'Hành lang: đèn quay của đoàn phim, trắng, đủ sáng, an toàn — và chính sự an toàn đó là cái đang bị lấy đi. Phòng điều khiển: ánh sáng monitor lam hắt lên mặt, đúng kiểu ánh sáng của cảnh 7.',
+col:'Trắng lạnh và lam monitor. Đây là cảnh duy nhất trong hồi ba trông "bình thường" — và đó là điều đáng sợ.',
+cam:'Camera cố định (lock-off, wide, méo) cho hành lang. 50mm bình thường cho phòng điều khiển. Sự khác nhau về chất ảnh giữa hai nửa cảnh là công cụ kể chuyện.',
+p:'Cinematic film still, in the style of a fixed security camera frame: wide-angle distortion, on-screen timecode 23:41, small red recording light, lower image quality. A thin Vietnamese man about 52 in a faded security uniform stands in the middle of a lit school corridor, looking directly into the lens with a blank expression, one hand reaching up toward the camera. Cold white crew work lights, everything looking normal and safe. Cold white and monitor blue. 16:9 surveillance framing, heavy grain and slight lens distortion.'},
+
+{n:30,act:'act3',t:'Anh lừa em',slug:'PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM',g:'#6B241C',
+vis:'Quá khứ được kể bằng khói. Mảnh hồn nhả một dòng khói đen cuộn thành hình ảnh — cô gái và người đàn ông trẻ trong chính căn phòng này. Đây là cách trình bày flashback vừa rẻ vừa hay: quá khứ hiện lên trong không gian hiện tại, cùng khung.',
+comp:'Nhân vật hiện tại đứng ở rìa khung, mờ, tối. Giữa khung là hình ảnh khói: cô gái và người đàn ông trẻ, bán trong suốt, đứng đúng vị trí trên vòng tròn. Máy phải để thấy cả hai lớp thời gian trong một shot — không cắt sang flashback riêng.',
+chr:'CÔ GÁI (~20) váy trắng, lắc đầu, "Em không cần." Rồi hiểu ra: "Anh lừa em." NGƯỜI ĐÀN ÔNG TRẺ (~31) — phải nhận ra được là bảo vệ khi trẻ: cùng khung xương mặt, cùng dáng gầy, mắt cùng độ phẳng. LÃO ĐẠO SĨ thở dốc sau khi hình ảnh tắt.',
+env:'Vẫn phòng nghi lễ. Khói đen cuộn từ mảnh hồn ở giữa vòng tròn, lan thành hình.',
+lit:'Hình ảnh khói tự phát sáng nhẹ, hơi xanh xám. Nhân vật hiện tại chỉ được viền sáng từ đèn pin đặt dưới nền. Hai lớp thời gian có hai nhiệt độ màu khác nhau trong cùng khung.',
+col:'Xám xanh của quá khứ, đỏ nâu của hiện tại. Cả hai trên nền đen.',
+cam:'Lock-off 32mm, không di chuyển — để khán giả tự đọc hai lớp. Cận cô gái và người đàn ông dùng 65mm, vẫn giữ chất bán trong suốt.',
+p:'Cinematic film still, underground brick ritual chamber. Two time layers in a single frame: at the edges, present-day people standing dark and out of focus, rim-lit by floor flashlights. At the center, formed from swirling black smoke rising off a talisman, a semi-transparent faintly glowing apparition of a young Vietnamese woman about 20 in a simple white dress facing a thin young Vietnamese man about 31, both standing on the painted ritual circle. She is shaking her head. The smoke figures glow cool grey-blue; the present-day space is dried-blood red-brown. Anamorphic 2.39:1, 32mm, locked-off, 35mm film grain.'},
+
+{n:31,act:'act3',t:'Sợi dây đỏ',slug:'PHÒNG KÝ TÚC XÁ – CÙNG LÚC',g:'#7A231C',
+vis:'Cảnh cắt song song lạnh nhất. Không có ma, không có sương, chỉ có một người đàn ông làm việc rất bình tĩnh với một cơ thể bất động. Và câu "Xin lỗi" của hắn khiến hắn trở thành nhân vật, không phải con quái vật.',
+comp:'Wide phòng ký túc trống, giường Trang và giường Bon nằm ở hai bên khung. Bảo vệ bước vào từ nền sâu. Cận: sợi dây đỏ buộc quanh cổ tay Trang — đỏ trên da trắng trên nền lam, đây là shot đắt nhất cảnh. Kết: hắn bế Trang ra, hành lang phía sau không còn một camera nào có đèn đỏ.',
+chr:'BẢO VỆ động tác thuần thục, không hấp tấp — người này đã làm việc này trước đây. Hắn nhìn mặt Trang, nói "Xin lỗi", rồi "Nhưng lần này tôi không thể thất bại nữa." Nét sợ hãi phải le lói dưới sự bình tĩnh.',
+env:'Phòng ký túc trống, chăn xô, vòng muối bị xóa nhòe bởi bước chân. Ngoài hành lang, các đèn báo camera đã tắt hết.',
+lit:'Trăng lam như cũ, nhưng giờ có thêm một đèn pin nhỏ hắn cầm, đặt thấp — ánh sáng đến từ phía dưới lên mặt hắn.',
+col:'Lam lạnh với một điểm đỏ tuyệt đối: sợi dây. Đây là lần đầu đỏ nghi lễ đi lên khỏi địa đạo, vào không gian của người sống.',
+cam:'Lock-off wide, rồi cận macro sợi dây. Cú bế Trang đi: máy đứng yên, để họ đi ra khỏi khung — không theo. Sự không theo đó tạo cảm giác bất lực.',
+p:'Cinematic film still, empty abandoned dormitory at night. A thin Vietnamese man about 52 in a faded security uniform stands beside a bed where a tall young Vietnamese woman lies unconscious, eyes closed. Close detail: a bright red cord being tied around her pale wrist, the only saturated red in a cold blue-green moonlit frame. Blankets disturbed, salt circles smeared by footsteps. A small flashlight set low, lighting his face from below. Beyond the doorway, a dark corridor with no camera lights on. Cold moonlit blue with one absolute red accent. Anamorphic 2.39:1, 40mm, locked-off, 35mm film grain.'},
+{n:32,act:'act4',t:'Đưa người sống đến chỗ chết',slug:'ĐỊA ĐẠO – ĐÊM',g:'#4A3020',
+vis:'Cảnh mở hồi bốn và mở rộng thế giới: địa đạo không chỉ để làm nghi lễ, nó còn được xây để vận chuyển người. Kết cảnh là hình ảnh phản diện đứng trong tối nhìn theo mà không đuổi — hắn không cần đuổi, vì họ đang đi đúng hướng hắn muốn.',
+comp:'Một đường nứt nhỏ chạy dọc nền đá, kéo dài vào bóng tối — dùng nó làm đường dẫn mắt (leading line) từ tiền cảnh ra hậu cảnh. Kết cảnh: nhóm người chạy đi ở nền sâu, và ở tiền cảnh, lệch rìa khung, một bóng người đứng bất động, out of focus. Khán giả thấy hắn, nhân vật không.',
+chr:'LÃO ĐẠO SĨ siết kiếm gỗ đào khi nói "đến chỗ chết" — thoại nặng nên hành động phải nhỏ. BẢO VỆ mỉm cười, nhìn đồng hồ: 23:52. "Còn tám phút."',
+env:'Địa đạo, nền đá nứt, tường gạch có vệt đen. Một ký hiệu dưới nền đang từ từ sáng lên — điểm sáng duy nhất không do người tạo ra.',
+lit:'Đèn pin nhóm người ở nền sâu, còn tiền cảnh chỉ có ánh phản xạ yếu — đủ để thấy hình bóng bảo vệ. Ký hiệu dưới nền phát sáng đỏ mờ tự thân.',
+col:'Nâu đất, đỏ mờ của ký hiệu. Đỏ giờ bắt đầu phát sáng chứ không chỉ là vết khô.',
+cam:'32mm, deep focus cho cú leading line. Cú chốt dùng focus pull ngược: nhóm người rõ ở nền sâu, rồi focus trôi về tiền cảnh và bóng bảo vệ hiện rõ.',
+p:'Cinematic film still, deep inside a brick tunnel at night. A thin crack runs along the stone floor from foreground into darkness as a leading line; one carved symbol in the floor glows faint dull red on its own. In the deep background, a small group of people with flashlights running away down the tunnel. In the sharp foreground at the frame edge, the motionless dark shape of a thin man in a uniform standing watching them, faintly rim-lit. Earth brown, dull glowing red. Anamorphic 2.39:1, 32mm, deep focus, 35mm film grain.'},
+
+{n:33,act:'act4',t:'Đừng để cảm xúc dẫn đường',slug:'ĐỊA ĐẠO – ĐÊM',g:'#3E2A1C',
+vis:'Cảnh vắt kiệt thể chất và là cảnh quy tắc của mảnh hồn quay lại đánh họ: nó không dẫn tới Trang, nó dẫn tới nơi ký ức của nó bị giữ. Sau tiếng hát của Trang có tiếng trẻ con cười — và ông lão nói câu tàn nhẫn nhất phim với một người mẹ.',
+comp:'Đường hầm hẹp dần đến mức phải cúi — dùng khung hình nén sát người, tường chạm hai rìa khung. Rễ cây xuyên qua tường thành những sợi cắt ngang tiền cảnh. Nhóm người mất dáng người, chỉ còn hình co lại.',
+chr:'DUYÊN mắt đỏ, thân đã nghiêng đi. Câu "Đó là con tôi" phải nói rất bình thường, không gào — mới đau. LÃO ĐẠO SĨ đáp "Tôi biết" rồi mới nói tiếp — cái "Tôi biết" đó là chỗ nhân tính của ông.',
+env:'Đường hầm hẹp, rễ cây mọc xuyên tường, có đoạn phải cúi. Nước nhỏ giọt, không khí đặc.',
+lit:'Đèn pin giờ yếu hơn (pin sắp cạn — nếu áp dụng đề xuất trong review), vàng hơn, quầng nhỏ hơn. Ánh sáng phải xấu dần theo tiến trình phim.',
+col:'Nâu đất bẩn, xanh rêu của rễ, vàng yếu của đèn. Bảng màu ngột ngạt nhất phim.',
+cam:'50mm handheld sát người, thở gấp theo. Khi ông lão nói câu cuối, cắt sang cận Duyên và giữ trên mặt cô đến hết cảnh.',
+p:'Cinematic film still, a very narrow brick tunnel where people must stoop. Tree roots pierce the walls and cross the foreground like threads. A small group of Vietnamese people squeezed into the passage, bodies hunched, no longer reading as full human shapes. Their flashlight beams are weak and yellowing, pools small. Water dripping, air thick with dust. In close-up, a woman about 33 with red-rimmed eyes leaning forward. Dirty earth brown, moss green roots, weak yellow light — the most claustrophobic palette in the film. Anamorphic 2.39:1, 50mm, tight handheld, 35mm film grain.'},
+
+{n:34,act:'act4',t:'Là người sống',slug:'ĐỊA ĐẠO – ĐÊM',g:'#463022',
+vis:'Cảnh đảo genre. Từ đây phim không còn là chuyện ma — đối thủ là một con người. Bằng chứng: một dấu giày rất mới, dính bùn, trên nền địa đạo 21 năm không ai vào.',
+comp:'Ngã ba ba đường hầm — bố cục ba lỗ đen đối xứng, không biển chỉ dẫn, không dấu vết. Chèn cận: vệt máu cũ trên nền một nhánh, và dấu giày mới dính bùn. Cận dấu giày là shot mang trọn thông tin cảnh này.',
+chr:'QUANG là người phát hiện — anh đang chuyển từ POV bị động sang người điều tra. LÃO ĐẠO SĨ quỳ, nhìn thật kỹ, rồi nói "Không phải linh hồn. Là người sống." PHONG nhìn quanh, lần đầu anh sợ đúng thứ.',
+env:'Ngã ba đường hầm, ba miệng hầm tối như nhau, nền có vệt máu cũ ở một nhánh.',
+lit:'Đèn pin chiếu xuống nền, gần như top-light — mặt người tối, nền sáng. Ánh sáng dồn hết vào bằng chứng, không vào nhân vật.',
+col:'Nâu đất với bùn ướt còn bóng — chi tiết "còn ướt" phải đọc được bằng highlight trên bề mặt.',
+cam:'Wide 28mm cho ngã ba. Macro cho dấu giày, đèn chếch để nổi vân đế và bùn ướt.',
+p:'Cinematic film still, a three-way junction deep in an old brick tunnel, three identical black passage mouths, no signage. Flashlights aimed down at the floor, top-lighting the ground while faces stay dark. Close detail: old dried blood streaks on one passage floor, and beside them a very fresh muddy shoe print, the wet mud still catching a specular highlight. A man kneels examining it. Earth brown, wet mud sheen. Anamorphic 2.39:1, 28mm wide plus macro detail, 35mm film grain.'},
+
+{n:35,act:'act4',t:'LỘC CỘC',slug:'PHÒNG KÝ TÚC XÁ – CÙNG LÚC',g:'#6D2A22',
+vis:'Cảnh cắt song song, và điều đáng sợ nằm ở tính hành chính của nó: một chiếc cáng, một chiếc khăn đen, một tin nhắn đã soạn sẵn chưa gửi. Hắn không điên — hắn có quy trình.',
+comp:'Cận chiếc khăn đen được phủ lên người Trang — khung hình gần như trừu tượng, chỉ còn vải đen trùm hình người. Wide: cả phòng và hành lang đầy người bất động của đoàn phim, không ai tỉnh. Cận điện thoại: tin nhắn "BẮT ĐẦU." — chưa gửi. Kết: bánh cáng lăn trên nền, khung hình chỉ có bánh xe và bụi.',
+chr:'BẢO VỆ dừng lại một lần khi nghe tiếng động, quay đầu rất nhanh — hắn cũng đang sợ. Chi tiết này phải rõ, vì nó là hạt giống cho cảnh 47.',
+env:'Phòng ký túc, cáng nhỏ, khăn đen. Ngoài hành lang: nhà sản xuất gục trên ghế, một người quay phim nằm cạnh camera đã tắt.',
+lit:'Trăng lam, cộng một đèn dầu hoặc đèn pin thấp. Bóng của cáng đổ dài trên hành lang — dài hơn cáng rất nhiều.',
+col:'Lam lạnh, đen vải, một điểm sáng của màn hình điện thoại.',
+cam:'Lock-off cho wide. Cận bánh xe cáng ở tầm nền. Không nhạc — chỉ tiếng lộc cộc và tiếng bụi.',
+p:'Cinematic film still, empty abandoned dormitory at night. A small wheeled stretcher with a black cloth draped over the shape of a body; a thin man in a faded security uniform pauses and turns his head sharply as if hearing something, a flicker of fear on his face. Beyond the doorway, a corridor where a producer slumps unconscious in a chair and a camera operator lies beside a switched-off camera. A phone screen glowing with an unsent message. Moonlit blue-green, black cloth, one small screen glow, the stretcher casting a shadow far longer than itself. Anamorphic 2.39:1, 40mm, locked-off, 35mm film grain.'},
+
+{n:36,act:'act4',t:'Hai chiếc đồng hồ',slug:'PHÒNG ĐIỀU KHIỂN – ĐÊM',g:'#3B4A50',
+vis:'Cảnh gieo hạt cho twist, và nó phải được quay như một shot thông tin: hai chiếc đồng hồ trong cùng khung, chỉ hai giờ khác nhau. Hắn chỉnh chiếc trên tường theo chiếc của mình. Khán giả thấy, nhưng chưa hiểu tại sao — đó là cách gieo hạt đúng.',
+comp:'Bố cục hai vật đối xứng trong một khung: đồng hồ cơ cũ đặt trên bàn (23:56) và đồng hồ treo tường (00:04), cả hai đọc được rõ. Trước đó: cận chiếc túi mở ra — dây đỏ, nến, một con dao nhỏ, lá bùa. Bố cục kiểu flat-lay, như một bộ dụng cụ.',
+chr:'BẢO VỆ hoàn toàn bình tĩnh, thao tác gọn. Hắn mỉm cười khi thấy hai đồng hồ lệch — nụ cười đó về sau sẽ là chỗ hắn sai.',
+env:'Phòng điều khiển nhỏ, hàng chục màn hình giám sát, nhiều màn đã đen. Bàn kim loại, ghế xoay, dây cáp.',
+lit:'Ánh sáng monitor lam từ nhiều hướng, không có key sáng chính — mặt hắn bị chia thành nhiều mảng lạnh. Đây là đánh sáng của phản diện, và nó lặp lại chính xác cách đánh sáng của Phong ở cảnh 7.',
+col:'Lam monitor, xám kim loại, và điểm đỏ của dây trong túi.',
+cam:'Lock-off. Shot hai đồng hồ phải là một shot duy nhất, không cắt qua lại — vì cả twist nằm ở việc chúng ở cùng khung.',
+p:'Cinematic film still, a small dark control room with dozens of surveillance monitors, many gone black. On a metal desk, a flat-lay of ritual tools: red cord, candles, a small knife, folded talismans, and an old mechanical clock reading 23:56. On the wall behind, a wall clock reading 00:04 — both clocks clearly legible in the same frame. A thin man about 52 in a faded security uniform reaching to take the wall clock down. Cold blue monitor light from several directions, no main key, splitting his face into cold patches. Monitor blue, metal grey, one red accent. Anamorphic 2.39:1, 35mm, locked-off, 35mm film grain.'},
+
+{n:37,act:'act4',t:'Cần gạt sau viên gạch',slug:'ĐỊA ĐẠO – ĐÊM',g:'#4E3524',
+vis:'Cảnh giải đố duy nhất của nhóm, và nó cho Cha một việc: gõ ba lần, một viên gạch bật ra, bên trong là cần gạt sắt. Chi tiết này quan trọng vì nó chứng minh địa đạo là công trình do người xây, có cơ cấu — không phải hang ma.',
+comp:'Cánh cửa sắt với những đường vẽ khắc bằng dao chiếm hết khung — không giống bùa chú, giống người khắc bằng tay. Bàn tay ông lão đưa lên nhưng không chạm. Cận: viên gạch bật ra, bên trong là cần gạt sắt rỉ. Wide: cửa mở, RẦM.',
+chr:'LÃO ĐẠO SĨ đưa tay lên rồi ngừng — không chạm. Cử chỉ của người đã học được giá của việc chạm. CHA kéo cần gạt — hành động của ông, và nó phải được máy ưu tiên.',
+env:'Cửa sắt trong địa đạo, mặt cửa đầy nét khắc bằng dao. Tường bên phải có một viên gạch lệch.',
+lit:'Đèn pin chếch cạnh để nổi các nét khắc trên sắt — ánh sáng grazing. Sau khi cửa mở, một luồng khí và ánh sáng đỏ mờ từ trong tràn ra, lần đầu ánh sáng đến từ phía trước họ.',
+col:'Sắt xám, gỉ nâu, và đỏ mờ mới tràn ra từ trong.',
+cam:'Macro cho nét khắc và cần gạt. 28mm cho cú cửa mở, máy hơi lùi khi cửa bật — như bị đẩy.',
+p:'Cinematic film still, an old iron door deep in a brick tunnel filling the frame, its surface covered in crude marks scratched by a knife rather than painted talismans. An aged hand raised toward it but not touching. To the right, one brick popped out of the wall revealing a rusted iron lever inside. Grazing flashlight from the side to catch every scratch on the metal. As the door opens, faint dull red light and cold air spill out toward camera. Iron grey, rust brown, new dull red. Anamorphic 2.39:1, 28mm plus macro, 35mm film grain.'},
+
+{n:38,act:'act4',t:'Những nét đỏ vẫn còn ướt',slug:'PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM',g:'#7E2318',
+vis:'Cú đảo chiều thông tin: vòng nghi lễ cũ 21 năm, nhưng một phần của nó vừa mới được vẽ lại, máu chưa khô. Nghi lễ không phải chuyện quá khứ — nó đang diễn ra tối nay.',
+comp:'High angle vào vòng nghi lễ, và bố cục phải cho thấy sự chênh lệch: phần lớn vòng là nét đỏ nâu khô mờ, còn một cung mới là đỏ tươi bóng, phản sáng. Sự khác nhau về độ bóng là nội dung. Cận: bàn tay ông lão chạm vào, máu dính lên đầu ngón.',
+chr:'QUANG bước tới, nói "Có người vừa vẽ lại." LÃO ĐẠO SĨ quỳ, chạm, không rút tay lại. Khi ông giật lấy sợi dây đỏ Quang tìm được và nói "Của con bé" — đó là lúc ông biết chắc con gái mình đã bị dùng.',
+env:'Phòng nghi lễ, không khí lạnh buốt (hơi thở thành khói rõ), vòng nghi lễ, sợi dây đỏ vướng ở góc nền.',
+lit:'Nến vừa được thắp ở rìa vòng — nguồn sáng ấm, thấp, lay động. Đây là lần đầu địa đạo có ánh sáng ấm, và nó thuộc về nghi lễ chứ không thuộc về họ.',
+col:'Đỏ tươi bóng trên đỏ nâu khô, vàng nến, đen. Cảnh đỏ nhất phim tính đến đây.',
+cam:'High angle cho vòng tròn. Macro cho máu ướt. Khi tiếng hát và tiếng Bon vọng lên từ dưới nền, máy tilt xuống nền — hướng máy đi ngược trực giác khán giả.',
+p:'Cinematic film still, high angle over a ritual circle painted on an underground stone floor. Most of the circle is faded dry red-brown, but one arc has been freshly repainted in wet glossy red that catches specular highlights — the difference in sheen is the subject. A red cord lies discarded at the edge. Newly lit candles at the rim give low flickering warm light, the first warm light in the tunnels. An aged hand touching the wet paint, blood on the fingertips. Visible breath in freezing air. Glossy fresh red over dry red-brown, candle gold, black. Anamorphic 2.39:1, 35mm, high angle plus macro, 35mm film grain.'},
+
+{n:39,act:'act4',t:'Hai phút',slug:'HÀNH LANG BÍ MẬT – ĐÊM',g:'#5B3A1C',
+vis:'Cảnh ngắn, chức năng: cho khán giả thấy hắn đang nhìn họ từ xa và không vội. Hình ảnh phải làm được một việc — biến ánh đèn pin của nhân vật chính thành thứ bị quan sát.',
+comp:'Máy đặt sau vai bảo vệ ở tiền cảnh (chỉ thấy viền vai và chiếc đèn dầu), nhìn về nền sâu: khe cửa phòng nghi lễ, bên trong ánh đèn pin của Quang đang di chuyển. Bố cung một điểm sáng nhỏ ở xa và một khối tối lớn ở gần.',
+chr:'BẢO VỆ không vội, chỉ đứng nhìn, gửi tin nhắn "ĐÃ ĐẾN ĐỊA ĐẠO." Nhìn đồng hồ: 23:58. Thì thầm "Hai phút." Một nụ cười rất nhẹ.',
+env:'Một hành lang bí mật khác trong địa đạo, hẹp, chưa từng xuất hiện. Hắn cầm đèn dầu — không đèn pin, chi tiết nói rằng hắn thuộc về nơi này hơn họ.',
+lit:'Đèn dầu ấm cầm thấp, chỉ soi bàn tay và một phần mặt hắn. Xa xa là ánh đèn pin trắng lạnh của nhóm — hai nhiệt độ màu đối lập trong một khung, và ấm là màu của kẻ đi săn.',
+col:'Vàng đèn dầu ở tiền cảnh, trắng lạnh ở nền sâu, đen ở giữa.',
+cam:'85mm nén để làm nền sâu gần lại. Lock-off. Không nhạc, chỉ tiếng dầu cháy.',
+p:'Cinematic film still, a narrow secret tunnel passage at night. Foreground: over the shoulder of a thin man in a faded uniform, only his shoulder rim and the oil lamp in his hand visible, the warm flame lighting his fingers and part of his face from below. Deep background: a doorway crack with cold white flashlight beams moving inside a chamber. A small distant cold point of light against a large near mass of warm darkness. Oil-lamp gold foreground, cold white distance, black between. Anamorphic 2.39:1, 85mm compressed, locked-off, 35mm film grain.'},
+
+{n:40,act:'act4',t:'23:41 và 23:58',slug:'PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM',g:'#762A20',
+vis:'Cảnh nhận ra. Ông lão so ba chiếc điện thoại — tất cả 23:58 — với chiếc đồng hồ cổ trên tường địa đạo: 23:41. Kim giây vẫn chạy. Ông hiểu ra, và không nói. Đây là cảnh phải kìm lại: giữ bí mật với cả khán giả thêm chín cảnh nữa.',
+comp:'Cận đồng hồ cổ trên tường gạch (23:41) rồi cắt sang cận màn hình điện thoại (23:58) — hai cận đối xứng. Sau đó một shot chứa cả hai: bàn tay ông lão giơ điện thoại lên ngang chiếc đồng hồ tường. Đó là shot chốt.',
+chr:'LÃO ĐẠO SĨ chợt hiểu nhưng chưa nói ra — diễn xuất phải là một cú lặng, không phải một cú giật. Khi mảnh hồn đâm vào tường và bị bật ngược, ông biến sắc: "Không đúng..." QUANG chỉ theo được nửa suy nghĩ của ông.',
+env:'Phòng nghi lễ, một chiếc đồng hồ cơ cũ treo trên tường địa đạo — chi tiết vô lý mà lại hợp lý: ai treo nó ở đây, và tại sao nó vẫn chạy.',
+lit:'Nến rìa vòng và đèn pin. Mặt đồng hồ được đánh sáng riêng bằng một chùm đèn pin thẳng — chỉ mặt đồng hồ sáng, tường quanh nó tối.',
+col:'Đỏ nến, đen tường, trắng mặt đồng hồ. Mặt đồng hồ là thứ sáng nhất khung.',
+cam:'Cận macro hai lần. Shot chốt dùng 50mm, đứng yên, giữ đủ lâu để khán giả tự đọc hai con số. RẦM từ phía trên: máy tilt lên trần địa đạo.',
+p:'Cinematic film still, underground ritual chamber. An old mechanical wall clock hanging incongruously on the brick wall, its face reading 23:41, lit by a single direct flashlight beam so only the dial is bright while the wall around it stays dark. In the same frame, an aged hand holds up a mobile phone whose screen reads 23:58, raised level with the clock face. Candle light at the frame edges. The clock dial is the brightest thing in shot. Candle red, black brick, white dial. Anamorphic 2.39:1, 50mm, locked-off, 35mm film grain.'},
+
+{n:41,act:'act4',t:'Chú đang làm gì vậy?',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#8C2419',
+vis:'Cảnh cho phản diện nếm cái hắn gây ra. Hắn đang vẽ vòng máu bằng máu cổ tay Trang, đúng 23:59 — và một bóng nhỏ xuất hiện ngay sau chân hắn. Giọng Bon. Lần đầu mặt hắn lộ vẻ sợ. Rồi 00:00, hắn lại mỉm cười: "Đúng giờ." Và có tiếng gõ cửa.',
+comp:'Cận từng nét máu được kéo trên nền — bố cục lặp, nhịp điệu, gần như thiền. Cắt sang wide: hắn quỳ giữa phòng, Trang nằm trong vòng. Cú scare: máy đặt sau hắn, và trong khung có một chiếc bóng nhỏ đổ ra từ chân hắn — bóng của một đứa trẻ, không có đứa trẻ nào. Kết: cận cửa, ba tiếng gõ.',
+chr:'BẢO VỆ thì thầm "Lần này... không ai cứu được em." Rồi khựng lại, quay đầu, nhìn xuống, lùi lại — chuỗi phản ứng phải rõ ràng. TRANG mở mắt nhưng vô hồn, một giọng hát rất nhỏ.',
+env:'Phòng ký túc, một vòng máu đang vẽ dở trên nền, con dao nhỏ, giọt máu rơi xuống nền: TÍCH. Đồng hồ 23:59.',
+lit:'Nến hắn thắp quanh vòng — ánh sáng ấm lay động, đổ bóng nhân vật to lên tường và lay theo. Trăng lam vẫn ở cửa sổ như một nguồn thứ hai không đổi.',
+col:'Đỏ máu tươi và vàng nến trên nền lam. Đây là cảnh mà hai bảng màu của phim va vào nhau trong cùng một phòng.',
+cam:'Macro cho nét máu. 40mm cho wide. Cú bóng trẻ con: lock-off, không nhấn nhạc, không zoom — để khán giả tự tìm thấy nó trong khung.',
+p:'Cinematic film still, abandoned dormitory at night. A thin man about 52 in a faded security uniform kneels drawing a circle on the floor in fresh blood, a small knife beside him, a tall young woman lying unconscious inside the circle with a cut wrist, a red cord on her arm. Candles he has lit around the circle throw large flickering shadows up the walls; cold moonlight from the window as a second unchanging source. On the floor stretching from his feet is the small shadow of a child, though no child is present. He has turned his head, fear on his face for the first time. Fresh blood red and candle gold against moonlit blue. Anamorphic 2.39:1, 40mm, locked-off, 35mm film grain.'},
+
+{n:42,act:'act4',t:'Chính các người đưa cô ta đến đây',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#8C2419',
+vis:'Cảnh đối đầu mở màn, và bố cục phải nói hết: một bên là bảy người, một bên là một người — nhưng người một mình đang kiểm soát, vì nạn nhân nằm sau lưng hắn và một đường máu chia sàn nhà thành hai lãnh thổ.',
+comp:'Wide đối xứng qua ngưỡng cửa: nhóm bảy người ở cửa, bảo vệ giữa phòng, Trang nằm sau hắn. Đường máu trên nền chạy ngang khung, thành một biên giới thấy được — không ai được bước qua. Cận: cổ tay Trang chảy máu, dòng máu chảy theo đường tròn kỳ dị.',
+chr:'BẢO VỆ bật cười: "Các cậu xuống đó nhanh hơn tôi nghĩ." Rồi hai người nhìn nhau — hắn và ông lão. "Cuối cùng ông cũng đến." LÃO ĐẠO SĨ sững lại: "Ngươi biết ta?" QUANG bước vào, đây là lần đầu anh dẫn đầu cả nhóm.',
+env:'Phòng ký túc, nến, vòng máu, cáng, khăn đen. Camera đoàn phim trong phòng đều tắt đèn đỏ — chi tiết phải thấy được trong khung.',
+lit:'Nến của hắn đánh sáng hắn từ dưới, ấm. Nhóm người ở cửa được viền bởi ánh trăng từ hành lang, lạnh. Hai nhóm hai màu, hai nhiệt độ — đối đầu được đánh sáng chứ không cần thoại.',
+col:'Ấm nến ở giữa phòng, lam lạnh ở ngưỡng cửa, đỏ ở nền.',
+cam:'Wide 28mm đối xứng, lock-off. Sau đó cắt qua lại giữa cận hắn (85mm, ấm) và cận ông lão (85mm, lạnh) — hai cận không được cùng nhiệt độ màu.',
+p:'Cinematic film still, abandoned dormitory at night, symmetrical wide shot through a doorway. On the threshold, a group of seven Vietnamese family members rim-lit cold blue by corridor moonlight. At the center of the room, a thin man about 52 in a faded uniform lit warm from below by candles, holding a small knife. Behind him a young woman lies unconscious with a bleeding wrist, blood tracing a strange circle across the floor that reads as a visible border no one may cross. Switched-off film cameras with dark indicator lights around the room. Warm candle center, cold blue threshold, red floor. Anamorphic 2.39:1, 28mm, locked-off, 35mm film grain.'},
+
+{n:43,act:'act4',t:'Nó chưa nhập hoàn toàn',slug:'PHÒNG KÝ TÚC XÁ – LIÊN TỤC',g:'#8C2419',
+vis:'Cảnh tiết lộ cơ chế, và nó phải chạy bằng thoại nên hình ảnh phải cực kỷ luật: chỉ ba cỡ ống kính, không di chuyển máy, để khán giả nghe. Điểm hình ảnh duy nhất là những chiếc camera tắt — hắn nhìn chúng khi nói "Các người gọi nó là chương trình."',
+comp:'Tam giác ba đỉnh: bảo vệ, ông lão, Quang. Máy giữ cả ba trong một wide, rồi cắt cận theo ai đang nói. Chèn: cận hắn nhìn về phía các camera đã tắt — POV camera nhìn lại hắn, tối, đèn đỏ không sáng.',
+chr:'BẢO VỆ "Tôi gọi nó là một cơ hội." Khi ông lão nói "Ngươi cần thứ đang ở trong cô ấy", nụ cười hắn biến mất — đó là beat quan trọng nhất cảnh. "Nó chưa nhập hoàn toàn" nói rất nhẹ. "Ông vẫn thông minh như ngày xưa" — câu chốt reveal.',
+env:'Phòng ký túc như cảnh 42, nến cháy thấp hơn, sáp chảy.',
+lit:'Không đổi so với 42 — sự không đổi là chủ ý, vì cảnh này là cảnh thông tin. Chỉ nến lụn dần, ánh sáng thấp hơn từng shot.',
+col:'Như 42, nhưng tối hơn nửa stop mỗi shot.',
+cam:'Wide 28mm + hai cận 85mm. Tuyệt đối không dolly, không handheld. Kỷ luật hình ảnh ở đây làm cho hồi bốn có nhịp.',
+p:'Cinematic film still, abandoned dormitory at night, low-burning candles with pooled wax. A triangular standoff held in one wide frame: a thin man about 52 in a faded security uniform with a small knife, a gaunt old Vietnamese man about 72 holding a dark peachwood sword, and a man about 30. Behind them, switched-off film cameras on tripods with dark indicator lights, their lenses pointed back at the men. Warm dying candlelight from the center, cold moonlight from the doorway, blood-red floor markings. Anamorphic 2.39:1, 28mm, locked-off, 35mm film grain.'},
+
+{n:44,act:'act4',t:'Không gian linh hồn',slug:'KHÔNG GIAN LINH HỒN – KHÔNG XÁC ĐỊNH',g:'#EFEDE6',
+vis:'Cảnh nghỉ duy nhất của hồi bốn, và nó phải khác hoàn toàn về mặt hình ảnh: trắng xóa, không tường, không trần, không nền. Không bóng đổ, không grain, không chân trời. Sự vắng mặt của không gian là cái đáng sợ, không phải bóng tối.',
+comp:'Hai nhân vật đứng trong hư không trắng, không có đường chân trời để định vị. Bố cung trung tâm, rất nhiều không gian trống — dùng negative space cực đoan. Phía xa xuất hiện một cánh cửa đứng một mình, không tường. Kết: cô gái váy trắng đứng phía sau Trang, tay chỉ về cánh cửa.',
+chr:'TRANG lần đầu có agency — cô cúi xuống ngang tầm Bon, nắm tay cậu, nói "Bon có sợ không?" BON bình tĩnh một cách khác thường: "Không." CÔ GÁI không nói một lời, chỉ đưa tay chỉ. Mặt cô đầy nước mắt.',
+env:'Không có gì. Trắng tuyệt đối mọi hướng. Một cánh cửa gỗ độc lập ở xa, và sau nó là một căn phòng thấy mờ.',
+lit:'Ánh sáng khuếch tán tuyệt đối, không hướng, không nguồn — nhân vật không đổ bóng. Điều này rất khó và rất quan trọng: bóng đổ sẽ phá cảnh.',
+col:'Trắng ngà, xám cực nhạt, da người là màu đậm nhất trong khung. Zero saturation ngoài da.',
+cam:'50mm phẳng, không méo, lock-off. Không grain, không halation — chất ảnh phải sạch bất thường so với toàn bộ phim.',
+p:'Cinematic film still, a pure white void with no walls, ceiling, floor or horizon. A tall Vietnamese woman about 27 crouches to hold the hand of a 2-year-old boy; neither casts any shadow. Extreme negative space, centered composition. Far away, a single wooden door stands alone with no wall around it, a dim room visible beyond. Behind the woman stands a young Vietnamese woman about 20 in a simple white dress, long black hair, face wet with tears, one arm raised pointing toward the door. Absolutely diffuse directionless light, no shadows, ivory white and palest grey, skin the darkest value in frame, zero saturation elsewhere. 2.39:1, 50mm flat, no grain, unusually clean image.'},
+
+{n:45,act:'act4',t:'Thằng bé là phần cuối',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#8C2419',
+vis:'Cảnh tiết lộ cuối và cũng là cảnh phim tự thú nhận một điểm yếu (xem review): "cùng mệnh" và "Bon là phần cuối" đến quá muộn. Về hình ảnh, cảnh này nên được cứu bằng một cú montage ký ức rất nhanh — các mảnh của cảnh 12, 17, 27, 30, 38 nối lại, và vẫn thiếu một mảnh.',
+comp:'Ông lão ngồi xuống, đặt mảnh hồn lên nền — trở lại đúng bố cục top-down của cảnh 23, nhưng lần này mảnh hồn rung dữ dội. Montage: sáu shot rất ngắn, mỗi shot là một khung đã thấy trước đó, cắt cứng. Kết montage bằng một khung đen — mảnh còn thiếu.',
+chr:'LÃO ĐẠO SĨ "Nhưng tại sao phải là Trang?" — câu hỏi của một người vẫn chưa chịu hiểu. DUYÊN lao tới gào "ANH ĐÃ LÀM GÌ CON TÔI?!" BẢO VỆ lùi lại, nói "Nó vẫn còn sống. Ít nhất là lúc này." — và câu chốt: "Tôi định hoàn thành nó."',
+env:'Phòng ký túc, nến gần lụn, vòng máu, mảnh hồn rung trên nền.',
+lit:'Nến gần tắt — phòng tối hơn hẳn, chỉ còn trăng lam và vài điểm lửa. Ánh sáng đã cạn cùng với thời gian.',
+col:'Lam chiếm lại phòng, đỏ chỉ còn ở nền và trên cổ tay Trang.',
+cam:'Top-down cho mảnh hồn. Montage: sáu shot, mỗi shot 8–12 khung hình, không dissolve. Kết: cận ông lão, giữ trên mắt ông.',
+p:'Cinematic film still, abandoned dormitory, candles nearly burnt out so the room is much darker, cold moonlight reclaiming it. Overhead top-down shot of a small yellow talisman paper on the dusty floor, its thin black streak vibrating violently. A gaunt old Vietnamese man kneels over it; behind him, dim figures of a family, a woman lunging forward in grief, and a thin man in a uniform stepping back. Blood red remains only on the floor markings and a young woman\'s cut wrist. Cold blue dominant, minimal warm points. Anamorphic 2.39:1, top-down and 65mm, 35mm film grain.'},
+
+{n:46,act:'act4',t:'Tôi chỉ cần anh tức',slug:'PHÒNG KÝ TÚC XÁ – LIÊN TỤC',g:'#98261A',
+vis:'Cảnh Quang trở thành nhân vật chính thật sự — không bằng sức mạnh mà bằng chiến thuật: anh khiêu khích để kéo dài thời gian. "Hai mươi mốt năm mà vẫn phải trốn trong một ngôi trường bỏ hoang? Anh thắng được ai chưa?" Rồi cận chiến, và một luồng lực vô hình hất anh vào tường.',
+comp:'Cận Quang và cận bảo vệ đối nhau, khoảng cách rút ngắn dần theo từng cặp shot — bố cục thu hẹp cho tới khi thành cận chiến. Khi Quang bị hất bay: một shot duy nhất, wide, không cắt, người bay ngược qua khung và đập vào tường. Kết: ông lão vung kiếm, một đường máu trên nền bị chém đứt.',
+chr:'QUANG bình tĩnh một cách bất thường — anh đang diễn, và đây là lần đầu khả năng diễn của gia đình này được dùng để cứu người. PHONG hiểu ý em, nhìn Quang. BẢO VỆ siết dao, nụ cười tắt: "Cậu không hiểu gì cả."',
+env:'Phòng ký túc, nến bị đá lăn, giường sắt bị đẩy lệch, bụi bốc lên.',
+lit:'Nến bị đá làm ánh sáng nhảy loạn — lần đầu ánh sáng trong phim mất kiểm soát. Bụi bốc lên làm mọi chùm sáng thành cột.',
+col:'Đỏ và vàng nhảy loạn trên lam. Cảnh động nhất về ánh sáng.',
+cam:'Handheld thô, cắt nhanh cho đoạn cận chiến. Cú Quang bay: một wide lock-off duy nhất — cắt từ nhanh sang tĩnh làm cú đập vào tường nặng hơn.',
+p:'Cinematic film still, abandoned dormitory mid-fight. Dust thrown up into the air turning every light beam into a visible shaft; kicked-over candles making the light jump and lose control. A thin man about 52 in a faded uniform lunging with a small knife; a man about 30 twisting aside; an older brother and father rushing in; iron beds shoved out of line. In the background a gaunt old man raises a dark peachwood sword over the blood circle on the floor. Blood red and candle gold flaring chaotically over cold blue. Anamorphic 2.39:1, 35mm, raw handheld, motion blur, 35mm film grain.'},
+
+{n:47,act:'act4',t:'Nó khiến nghi lễ phản lại người thực hiện',slug:'ĐỊA ĐẠO – CÙNG LÚC',g:'#6B2A1E',
+vis:'Cảnh bi kịch nhất phim, và nó được kể bằng ba hình ảnh không thoại: cô gái nổi tiếng đứng trên sân khấu với gương mặt trống rỗng; cô ôm bức ảnh một đứa trẻ mà khóc; cô đứng trước gương, đặt tay lên cổ tay mình. Rồi ông lão hiểu — con ông tự sát, và cái chết đó là thứ nguyền rủa kẻ kia.',
+comp:'Ba shot ký ức phải có bố cục ngày càng đóng: (1) wide sân khấu, cô nhỏ giữa ánh đèn và biển khán giả; (2) trung cảnh phòng tối, cô và bức ảnh; (3) cận cổ tay và bàn tay trước gương — và cắt trước khi thấy gì thêm. Hiện tại: cận ông lão, mảnh hồn đang bốc cháy trên nền.',
+chr:'CÔ GÁI trên sân khấu: mặt trống rỗng giữa tiếng hò reo — đó là hình ảnh trung tâm của bi kịch. LÃO ĐẠO SĨ run rẩy, chỉ nói được "Nó đã tự sát." BẢO VỆ nghiến răng "Câm miệng!" — hắn nổi giận vì bị nói đúng.',
+env:'Ký ức: sân khấu lớn, ánh đèn sân khấu; một căn phòng tối; một chiếc gương. Hiện tại: địa đạo, mảnh hồn cháy thành lửa nhỏ trên nền đá.',
+lit:'Ký ức sân khấu: đèn sân khấu gắt từ trên, hào quang, khói — đẹp đến mức tàn nhẫn. Ký ức phòng tối: một cửa sổ duy nhất, ánh sáng xám. Hiện tại: mảnh hồn cháy là nguồn sáng duy nhất, ánh lửa nhỏ đánh lên mặt ông lão.',
+col:'Ký ức: vàng sân khấu bão hòa rồi tụt xuống xám xanh của phòng tối. Hiện tại: cam lửa nhỏ trên đen.',
+cam:'Ba shot ký ức, ba cỡ khác nhau, cắt cứng, không nhạc — chỉ tiếng vỗ tay tắt dần. Hiện tại: cận 85mm trên mặt ông lão, ánh lửa lay.',
+p:'Cinematic film still, memory image: a young Vietnamese woman about 20 stands alone at the center of a large stage under harsh top spotlights, haze and lens halation around her, a dark sea of cheering audience below — and her face is completely empty. Beautiful to the point of cruelty. Saturated stage gold. Anamorphic 2.39:1, 40mm, 35mm film grain. Companion frames: same woman in a dark room holding a photograph of a child to her chest, weeping, lit by one grey window; and a close shot of her hand resting on her own wrist in front of a mirror. Desaturating from stage gold to cold grey.'},
+
+{n:48,act:'act4',t:'Chị sẽ đưa em về',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#D8D2C4',
+vis:'Cảnh Trang giành lại quyền chủ động. Hai bàn tay chạm nhau trong không gian trắng — và motif "hai bàn tay chưa chạm" của cảnh 3 cuối cùng được hoàn tất, lần này bởi hai người phụ nữ. Rồi toàn bộ ký ức tràn vào, và Trang chọn.',
+comp:'Cắt hai lớp: phòng ký túc (ngón tay Trang trong vòng máu cử động, một giọt nước mắt) và không gian trắng (hai bàn tay chạm nhau, cận, chiếm trọn khung). Cận hai bàn tay chạm nhau phải được dựng đối xứng với cận hai bàn tay không chạm ở cảnh 3 — cùng cỡ, cùng vị trí trong khung.',
+chr:'TRANG bật khóc: "Em hiểu rồi..." rồi hỏi "Chị muốn em làm gì?" — và khi thấy cô gái chỉ về phía Bon, ánh mắt cô đổi: không còn sợ, chỉ còn quyết tâm. "Chị sẽ đưa em về." BON nắm tay cô, không sợ.',
+env:'Hai không gian song song: vòng máu trên nền phòng ký túc, và hư không trắng với một cánh cửa đang mở, ánh sáng đỏ tràn vào.',
+lit:'Không gian trắng vẫn không bóng đổ — nhưng giờ có một luồng đỏ tràn vào từ cánh cửa mở, phá vỡ sự khuếch tán hoàn hảo. Đó là dấu hiệu hai thế giới đang chạm nhau.',
+col:'Trắng ngà bị đỏ xâm nhập. Sự pha trộn này chỉ xảy ra một lần trong phim.',
+cam:'Cận hai bàn tay 100mm macro. Cú montage ký ức của Trang: rất nhanh, các mảnh đã thấy cộng ba mảnh mới (chiếc nồi, cú tát, cánh cửa đóng lại). Kết: cận mặt Trang, ánh sáng đỏ đã chạm tới má cô.',
+p:'Cinematic film still, split between two spaces. In a pure white shadowless void, extreme close-up of two women\'s hands touching, filling the frame, composed as the exact mirror of an earlier shot of two hands failing to reach. Beyond them, a door has opened and a shaft of deep red light spills into the perfect white diffusion. In the other space, a young woman lies inside a blood circle on a dusty dormitory floor, one fingertip twitching, a single tear running down. Ivory white invaded by red. 2.39:1, 100mm macro, clean image, minimal grain.'},
+
+{n:49,act:'act4',t:'Thời gian',slug:'PHÒNG KÝ TÚC XÁ – ĐÊM',g:'#A02A1C',
+vis:'Cảnh chốt của phần bản thảo hiện có. Quang hất nắm muối vào vòng máu — XÈO, khói đen bốc lên, vòng đứt, Trang bật người lên. Nhưng mắt cô vẫn trắng, và giọng Bon vẫn vọng từ trong tường. Rồi ông lão nhìn đồng hồ 00:01 và nói một từ: "Thời gian."',
+comp:'Cận nắm muối rơi vào máu, khói đen bốc lên thành cột — shot vật lý, phải thấy được hóa học. Wide: Trang bật người ngồi lên giữa phòng, mắt trắng. Kết: ông lão bước tới chiếc đồng hồ, cận mặt ông và mặt đồng hồ trong cùng khung, và mặt hắn tái đi ở nền sau.',
+chr:'QUANG hét "Mọi người tránh ra!" — lần đầu anh chỉ huy. TRANG hít mạnh, mở mắt, mắt vẫn trắng, quay đầu về phía tường. LÃO ĐẠO SĨ "Hắn đã tính sai một thứ." BẢO VỆ mặt tái, chỉ nói được "Không."',
+env:'Phòng ký túc, vòng máu đã đứt, khói đen tan dần, nến tắt gần hết. Đồng hồ 00:01.',
+lit:'Khói đen bốc lên làm ánh trăng thành cột thấy được. Nến tắt dần — đến cuối cảnh, nguồn sáng duy nhất còn lại là trăng. Ánh sáng nhân tạo của cả đêm đã hết.',
+col:'Đỏ đang bị khói đen và lam trăng chiếm lại. Cảnh chuyển tông sang phần kết.',
+cam:'Macro cho muối và khói. Wide 32mm cho Trang bật lên. Cú chốt: cận 85mm hai mặt (ông lão và đồng hồ), rồi rack focus ra nền sau tới mặt bảo vệ.',
+p:'Cinematic film still, abandoned dormitory at night. Close view of a handful of white salt hitting a fresh blood circle on the floor, black smoke boiling up from the contact into a visible column, cutting through the cold moonlight. Behind it a tall young woman sits bolt upright on the floor gasping, her eyes still completely white, head turning toward a brick wall. A gaunt old man in brown cloth stares at an old clock reading 00:01; deep behind him a thin uniformed man\'s face has gone pale. Candles nearly all out, moonlight now the only source. Red being reclaimed by black smoke and moon blue. Anamorphic 2.39:1, 32mm, 35mm film grain.'},
+{gap:true,act:'act5',t:'Cảnh 50–57 — chưa có trong bản thảo',
+d:'Bản thảo nhảy thẳng từ cảnh 49 sang cảnh 58. Tám cảnh còn thiếu chính là đoạn cao trào: twist thời gian phát huy tác dụng, Bon được trả về, và người bảo vệ bị hạ. Xem mục review, phần "Thiếu cảnh 50–57", để lấy đề xuất outline tám cảnh — dựng xong tám cảnh đó rồi mới nên storyboard tiếp, vì mọi lựa chọn hình ảnh của cảnh 58 phụ thuộc vào việc hắn chết thế nào.'},
+
+{n:58,act:'act5',t:'Cha đang nghe đây',slug:'PHÒNG NGHI LỄ – ĐÊM',g:'#C99A6A',
+vis:'Cảnh hay nhất kịch bản, và nó không có một cú scare nào. Người cha đặt kiếm xuống, ngồi xuống nền đất, và lần đầu trong đời thật sự ngồi nghe con gái hát. Toàn bộ chỉ đạo hình ảnh của cảnh này chỉ có một mệnh lệnh: đừng làm gì cả. Không dolly, không nhạc đè, không hiệu ứng linh hồn.',
+comp:'Một wide tĩnh, đối xứng, thấp — ông lão ngồi bên trái khung, cô gái đứng bên phải, khoảng trống giữa họ để nguyên. Đó là khoảng trống của hai mươi mốt năm, và nó chỉ được đóng lại ở cuối khi cô bước tới chạm vai ông. Kiếm gỗ đào nằm trên nền, ngoài tay ông — chi tiết quan trọng nhất khung hình.',
+chr:'LÃO ĐẠO SĨ ngồi xuống nền, đặt kiếm sang một bên, không lau nước mắt vì sợ chớp mắt thì cô biến mất. "Cha đang nghe đây." Rồi "Hay lắm... Con hát hay lắm." CÔ GÁI hát trọn bài, rơi nước mắt, bước tới, tựa trán vào trán cha, rồi tan đi. QUANG đứng xa, chỉ nhìn.',
+env:'Phòng nghi lễ. Người bảo vệ nằm bất động ở rìa khung. Vòng nghi lễ đã tắt, không còn phát sáng. Nến còn vài cây cháy thấp.',
+lit:'Đổi hoàn toàn khỏi bảng màu địa đạo: cô gái tự phát sáng nhưng lần này ánh sáng ẤM, không lạnh như cảnh 21 — vì cô không còn là thứ bị dùng. Ánh sáng của cô hắt lên mặt ông lão, và đó là ánh sáng ấm duy nhất còn lại dưới lòng đất.',
+col:'Vàng ngà ấm trên nền gạch nâu. Đỏ nghi lễ đã rút hết. Đây là lần đầu địa đạo có màu của sự sống.',
+cam:'Lock-off 40mm, một shot dài gần như trọn cảnh. Chỉ hai cận: mặt ông lão khi ông nói "Cha đang nghe đây", và bàn tay cô đặt lên vai ông. Sau khi cô tan đi, giữ máy trên ông thêm rất lâu trong im lặng.',
+p:'Cinematic film still, an underground brick ritual chamber, the ritual circle now dark and inert, a few low candles left, a uniformed man lying motionless at the frame edge. A gaunt Vietnamese man about 72 sits on the earth floor on the left, his dark peachwood sword laid down out of reach beside him, tears on his face, looking up. On the right stands a young Vietnamese woman about 20 in a simple white dress, singing, softly self-illuminated with WARM golden light that falls onto his face — the only warm light underground. A wide empty space between them. Warm ivory gold on brown brick, all ritual red gone. Anamorphic 2.39:1, 40mm, locked-off, long take, 35mm film grain.'},
+
+{n:59,act:'act5',t:'Rồi biến mất trong ánh sáng',slug:'NGOÀI TRƯỜNG – RẠNG SÁNG',g:'#D8C9A8',
+vis:'Cảnh giải phóng. Cửa trường mở rộng, ánh sáng ban mai tràn vào — và phải tràn vào theo hướng ngược lại với cảnh 10, nơi ánh sáng chiều đẩy họ vào. Cú chốt: Quang quay đầu, thấy bóng cô gái bên cửa sổ tầng trên cùng, cô mỉm cười rồi biến mất trong ánh sáng.',
+comp:'Wide ngược sáng từ trong trường nhìn ra cổng — cả đoàn thành silhouette đi về phía một khối sáng trắng. Sau đó reverse: máy ngoài sân, low angle, Quang quay đầu nhìn lên tầng trên cùng. POV: ô cửa sổ, một bóng cô gái, mỉm cười, tan trong nắng. Đúng ô cửa sổ của cảnh 10.',
+chr:'BON ngủ trong vòng tay Duyên — cậu bé đã về. Cảnh sát đưa bảo vệ ra, hắn đi giữa hai người, không phản kháng, mặt trống rỗng. QUANG là người duy nhất quay đầu lại — và là người duy nhất thấy.',
+env:'Cổng trường mở, xe cảnh sát, đèn xanh đỏ nhợt trong nắng sớm, đoàn phim tỉnh lại lảo đảo, thiết bị nằm ngổn ngang.',
+lit:'Nắng rạng sáng thấp, vàng nhạt, khuếch tán qua sương — ánh sáng mềm nhất phim. Cả ngôi trường lần đầu được thấy trong ánh sáng dịu chứ không ngược sáng gắt như cảnh 10.',
+col:'Vàng nhạt, xanh sương, bê tông xám. Bão hòa thấp — phim không ăn mừng, phim chỉ thở ra.',
+cam:'Wide 24mm ngược sáng cho cú đi ra. Cú POV cửa sổ dùng 100mm, và lần này focus phải rõ — ở cảnh 10 nó lệch focus, ở đây nó rõ. Đó là sự khác nhau giữa nghi ngờ và biết.',
+p:'Cinematic film still, dawn outside an abandoned Vietnamese school. Wide backlit shot from inside the gate looking out: a family and film crew reduced to silhouettes walking toward a block of soft white morning light, a woman carrying a sleeping 2-year-old boy, police leading away a thin man in a faded security uniform. Low diffused golden dawn light through mist, the softest light in the film, the whole building finally seen in gentle light rather than harsh backlight. On the top floor, one window where the faint figure of a young woman in white smiles and dissolves into the light. Pale gold, misty blue, grey concrete, low saturation. Anamorphic 2.39:1, 24mm and 100mm, 35mm film grain.'},
+
+{n:60,act:'act5',t:'Chú ấy đâu rồi?',slug:'BỆNH VIỆN – SÁNG',g:'#C4C8C0',
+vis:'Cảnh thở. Cả gia đình ở quanh giường Quang, và câu hỏi của anh không được ai trả lời — sự im lặng là cách phim thông báo cái chết, không cần một cảnh chết. Rồi anh nhìn ra cửa sổ: trời đang sáng.',
+comp:'Wide phòng bệnh, bố cục ấm áp lặp lại bố cục bàn ăn của cảnh 4 và cảnh 6 — cả gia đình quanh một trung tâm. Nhưng lần này không có camera nào, không có nồi lẩu, không có logo. Chèn: cận Trang nhìn xuống khi Quang hỏi — cái nhìn xuống là câu trả lời. Kết: cận Quang nhìn ra cửa sổ.',
+chr:'QUANG tỉnh lại, bình yên hiếm hoi trên mặt. TRANG ngồi cạnh giường, mắt đã bình thường trở lại — chi tiết phải thấy rõ. PHONG ngủ gục trên ghế. DUYÊN ôm Bon. MẸ bóc hoa quả. CHA ngồi im.',
+env:'Phòng bệnh sáng, giường sắt, dịch truyền, cửa sổ lớn, hoa quả trên bàn. Sạch, sáng, bình thường — đối lập tuyệt đối với mọi cảnh từ 18 tới 58.',
+lit:'Ánh sáng ngày qua cửa sổ lớn, mềm, đều, không có hướng gắt. Không một nguồn sáng nhân tạo nào — lần đầu kể từ cảnh 15.',
+col:'Trắng bệnh viện, xanh nhạt, và vàng nhẹ của hoa quả. Bão hòa thấp nhưng ấm dần.',
+cam:'Wide 35mm tĩnh, một cận Trang, một cận Quang. Không di chuyển máy — cảnh này chỉ cần đứng yên và để gia đình ở cùng nhau.',
+p:'Cinematic film still, a bright hospital room in the morning. A Vietnamese man about 30 awake in bed with an IV line, a rare peace on his face. A tall young woman about 27 sits beside the bed, her eyes normal again, looking down. His brother asleep in a chair, a woman holding a sleeping toddler, an older woman peeling fruit, an older man sitting silently. Large window, soft even daylight, no artificial light sources at all. Clean, bright, ordinary — the opposite of every scene before it. Hospital white, pale green, soft fruit yellow, low saturation turning warm. Anamorphic 2.39:1, 35mm, locked-off, 35mm film grain.'},
+
+{n:61,act:'act5',t:'Ba ngôi mộ',slug:'NGHĨA TRANG – CHIỀU',g:'#B9C4C0',
+vis:'Khung hình cuối phim. Ba ngôi mộ cạnh nhau — cô gái, đứa trẻ, và người cha. Rồi một tiếng hát rất khẽ vang lên, không rõ từ đâu, và Quang với Trang cùng nghe thấy. Họ nhìn nhau. Quang mỉm cười. Không nói gì. Máy lùi xa. FADE OUT.',
+comp:'Bắt đầu bằng cận ba tấm bia đặt cạnh nhau — bố cục ba khối bằng nhau, và tấm thứ ba mới nhất, đá còn sáng hơn hai tấm kia. Chi tiết đó nói hết. Rồi máy lùi rất chậm: gia đình vào khung, hàng cây vào khung, ba ngôi mộ nhỏ dần cho tới khi chỉ còn ba điểm sáng dưới nắng chiều.',
+chr:'QUANG đặt một bó hoa xuống, đứng lên. TRANG đứng bên cạnh anh — hai người đứng cạnh nhau ở khung hình cuối, sau khi cả phim họ chưa từng ở cạnh nhau trong một shot tĩnh. BON chạy vài bước rồi được Duyên kéo lại — nhịp sống duy nhất trong khung.',
+env:'Nghĩa trang buổi chiều, hàng cây cao hai bên, gió thổi, cỏ thấp, ba ngôi mộ đá cạnh nhau.',
+lit:'Nắng chiều thấp, xuyên qua hàng cây thành những vệt sáng chuyển động trên mặt cỏ khi gió thổi. Ánh sáng lay động này là hình ảnh cuối — nó gợi tiếng hát mà không cần thấy ai hát.',
+col:'Xanh cây bạc màu, xám đá, vàng chiều nhạt. Bão hòa thấp nhất phim — vòng cung màu đóng lại đúng ngược với cảnh 1.',
+cam:'Cận ba tấm bia, rồi một cú dolly-out/crane-out rất chậm, liên tục, không cắt, cho tới hết. FADE OUT trên nền tiếng hát nhỏ dần.',
+p:'Cinematic film still, a Vietnamese cemetery in late afternoon. Three stone graves side by side, equal in size; the third headstone is visibly newer, its stone brighter than the other two. A small family stands before them, a man about 30 setting down flowers, a tall young woman standing beside him, a toddler taking a few running steps before being pulled back. Tall trees on both sides, wind moving the branches so low afternoon sunlight falls in shifting stripes across the grass. Faded green, grey stone, pale afternoon gold, the lowest saturation in the film. Anamorphic 2.39:1, 50mm, very slow continuous crane-out, 35mm film grain.'}
+];
+
+/* ── Render ── */
+const esc = s => String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const pad = n => String(n).padStart(2,'0');
+const FIELDS = [
+  ['vis','Visual concept',true],
+  ['comp','Composition',false],
+  ['chr','Character',false],
+  ['env','Environment',false],
+  ['lit','Lighting',false],
+  ['col','Color / mood',false],
+  ['cam','Camera',false]
+];
+
+const host = document.getElementById('scenes');
+let out = '';
+let currentAct = null;
+
+const actOf = s => {
+  if (s.gap) return 'act5';
+  const n = s.n;
+  if (n <= 9) return 'act1';
+  if (n <= 17) return 'act2';
+  if (n <= 23) return 'act3';
+  if (n <= 39) return 'act4';
+  if (n <= 49) return 'act5';
+  return 'act6';
+};
+
+for (const s of SCENES){
+  const act = actOf(s);
+  if (act !== currentAct){
+    const a = ACTS.find(x=>x.id===act);
+    out += `<section class="act" id="${a.id}">
+      <figure class="act-fig"><img class="act-img" src="${a.img}" alt="Title card ${esc(a.cap)}" loading="lazy" decoding="async">
+      <figcaption>${esc(a.cap)}</figcaption></figure>
+      <div class="act-meta"><span class="r">Hồi ${esc(a.rn)} · ${esc(a.r)}</span><h3>${esc(a.h)}</h3><p class="note">${esc(a.note)}</p></div>
+    </section>`;
+    currentAct = act;
+  }
+  if (s.gap){
+    out += `<div class="gap"><span class="h">Khoảng trống trong bản thảo</span><h3 style="font-size:19px;color:var(--bone)">${esc(s.t)}</h3><p>${esc(s.d)}</p></div>`;
+    continue;
+  }
+  let f = '';
+  for (const [k,label,wide] of FIELDS){
+    f += `<div class="f${wide?' wide':''}"><span class="k">${esc(label)}</span><span class="v">${esc(s[k])}</span></div>`;
+  }
+  out += `<article class="scene" id="c${s.n}" style="--gc:${s.g}">
+    <div class="grade"></div>
+    <div class="scene-body">
+      <div class="scene-head"><span class="scene-no">${pad(s.n)}</span><h3 class="scene-title">${esc(s.t)}</h3></div>
+      <div class="scene-slug">${esc(s.slug)}</div>
+      <div class="fields">
+        ${f}
+        <div class="prompt">
+          <div class="prompt-top"><span class="k">AI Image Prompt</span><button class="copy" type="button" data-n="${s.n}">Copy</button></div>
+          <div class="prompt-body" id="p${s.n}">${esc(s.p)}</div>
+        </div>
+      </div>
+    </div>
+  </article>`;
+}
+host.innerHTML = out;
+
+/* Grade spine */
+const spine = document.getElementById('spine');
+spine.innerHTML = SCENES.filter(s=>!s.gap).map(s=>
+  `<a href="#c${s.n}" style="background:${s.g}" title="Cảnh ${pad(s.n)} — ${esc(s.t)}" aria-label="Cảnh ${pad(s.n)}: ${esc(s.t)}"></a>`
+).join('');
+
+/* Copy prompt */
+document.addEventListener('click', e => {
+  const b = e.target.closest('button.copy');
+  if (!b) return;
+  const txt = document.getElementById('p'+b.dataset.n).textContent;
+  navigator.clipboard.writeText(txt).then(()=>{
+    b.textContent = 'Đã copy';
+    b.classList.add('done');
+    setTimeout(()=>{ b.textContent='Copy'; b.classList.remove('done'); }, 1600);
+  }).catch(()=>{ b.textContent='Chọn & copy tay'; });
+});
+</script>
+
+</body>
+</html>
