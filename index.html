@@ -272,6 +272,25 @@ h1 .l2{color:var(--accent)}
   .facts{grid-template-columns:1fr 1fr}
 }
 @media (prefers-reduced-motion:reduce){ .side{transition:none} }
+
+/* ── Title card mở đầu mỗi hồi ── */
+.acthead{
+  display:grid;grid-template-columns:6.5rem minmax(0,var(--measure));
+  gap:0 2.5rem;padding:3.5rem 0 .5rem;border-top:2px solid var(--accent);
+  scroll-margin-top:4rem;
+}
+.actfig{margin:0}
+.actfig img{display:block;width:100%;max-width:26rem;height:auto;background:var(--sink)}
+.actfig figcaption{
+  margin-top:.45rem;font-family:"Roboto Mono",monospace;font-size:.56rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+}
+.acttitle{margin:0;font-size:1.55rem;line-height:1.15;letter-spacing:-.01em}
+.actnote{margin:0;color:var(--muted);font-size:.92rem;line-height:1.6}
+@media (max-width:820px){
+  .acthead{grid-template-columns:1fr;gap:0;padding-top:2.5rem}
+  .actfig img{max-width:none}
+}
 </style>
 
 
@@ -336,7 +355,8 @@ h1 .l2{color:var(--accent)}
       <span class="plabel" id="idxcount">53</span>
     </div>
     <div class="filter"><input type="search" id="q" placeholder="Lọc cảnh…" aria-label="Lọc cảnh"></div>
-    <nav class="toc" id="toc"><a href="#c1"><span class="n">1</span><span class="h">NGOẠI – CHỢ ĐỒNG XUÂN – NGÀY</span></a>
+    <nav class="toc" id="toc"><div class="sep">Hồi I — Gia đình diễn cái chết</div>
+<a href="#c1"><span class="n">1</span><span class="h">NGOẠI – CHỢ ĐỒNG XUÂN – NGÀY</span></a>
 <a href="#c2"><span class="n">2</span><span class="h">NGOẠI – ĐƯỜNG PHỐ – NGÀY</span></a>
 <a href="#c3"><span class="n">3</span><span class="h">NGOẠI – CẦU CHƯƠNG DƯƠNG – NGÀY</span></a>
 <a href="#c4"><span class="n">4</span><span class="h">NỘI – PHIM TRƯỜNG QUẢNG CÁO – NGÀY</span></a>
@@ -346,6 +366,7 @@ h1 .l2{color:var(--accent)}
 <a href="#c7"><span class="n">7</span><span class="h">NỘI – PHÒNG NGỦ PHONG – ĐÊM</span></a>
 <a href="#c8"><span class="n">8</span><span class="h">NỘI – PHÒNG KHÁCH – NGÀY</span></a>
 <a href="#c9"><span class="n">9</span><span class="h">NỘI – HÀNH LANG NHÀ – TỐI</span></a>
+<div class="sep">Hồi II — Ngôi trường nhận ra họ</div>
 <a href="#c10"><span class="n">10</span><span class="h">NGOẠI – CỔNG TRƯỜNG BỎ HOANG – CHIỀU</span></a>
 <a href="#c11"><span class="n">11</span><span class="h">NGOẠI – SÂN TRƯỜNG – CHIỀU</span></a>
 <a href="#c12"><span class="n">12</span><span class="h">NỘI – HÀNH LANG TRƯỜNG – CHIỀU</span></a>
@@ -354,12 +375,14 @@ h1 .l2{color:var(--accent)}
 <a href="#c15"><span class="n">15</span><span class="h">SÂN TRƯỜNG – CHIỀU TỐI</span></a>
 <a href="#c16"><span class="n">16</span><span class="h">PHÒNG ĂN TẠM – TỐI</span></a>
 <a href="#c17"><span class="n">17</span><span class="h">QUÁN GÀ NHỎ VEN ĐƯỜNG – TỐI</span></a>
+<div class="sep">Hồi III — Đêm bắt đầu</div>
 <a href="#c18"><span class="n">18</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
 <a href="#c19"><span class="n">19</span><span class="h">PHÒNG KÝ TÚC XÁ – LIÊN TỤC</span></a>
 <a href="#c20"><span class="n">20</span><span class="h">PHÒNG KÝ TÚC XÁ – LIÊN TỤC</span></a>
 <a href="#c21"><span class="n">21</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
 <a href="#c22"><span class="n">22</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
 <a href="#c23"><span class="n">23</span><span class="h">PHÒNG KÝ TÚC XÁ – ÍT PHÚT SAU</span></a>
+<div class="sep">Hồi IV — Địa đạo và nghi lễ</div>
 <a href="#c24"><span class="n">24</span><span class="h">HÀNH LANG KÝ TÚC XÁ – ĐÊM</span></a>
 <a href="#c25"><span class="n">25</span><span class="h">CỬA XUỐNG ĐỊA ĐẠO – ĐÊM</span></a>
 <a href="#c26"><span class="n">26</span><span class="h">ĐỊA ĐẠO – ĐÊM</span></a>
@@ -376,6 +399,7 @@ h1 .l2{color:var(--accent)}
 <a href="#c37"><span class="n">37</span><span class="h">ĐỊA ĐẠO – ĐÊM</span></a>
 <a href="#c38"><span class="n">38</span><span class="h">PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM</span></a>
 <a href="#c39"><span class="n">39</span><span class="h">HÀNH LANG BÍ MẬT – ĐÊM</span></a>
+<div class="sep">Hồi V — Cao trào</div>
 <a href="#c40"><span class="n">40</span><span class="h">PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM</span></a>
 <a href="#c41"><span class="n">41</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
 <a href="#c42"><span class="n">42</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
@@ -386,6 +410,7 @@ h1 .l2{color:var(--accent)}
 <a href="#c47"><span class="n">47</span><span class="h">ĐỊA ĐẠO – CÙNG LÚC</span></a>
 <a href="#c48"><span class="n">48</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
 <a href="#c49"><span class="n">49</span><span class="h">PHÒNG KÝ TÚC XÁ – ĐÊM</span></a>
+<div class="sep">Hồi VI — Cha nghe hết rồi</div>
 <a href="#c58"><span class="n">58</span><span class="h">PHÒNG NGHI LỄ – ĐÊM</span></a>
 <a href="#c59"><span class="n">59</span><span class="h">NGOÀI TRƯỜNG – RẠNG SÁNG</span></a>
 <a href="#c60"><span class="n">60</span><span class="h">BỆNH VIỆN – SÁNG</span></a>
@@ -439,6 +464,14 @@ h1 .l2{color:var(--accent)}
     </header>
 
     <main class="script" id="script">
+<div class="acthead" id="hoii">
+<div class="gut"><span class="cn">Hồi</span><span class="num">I</span></div>
+<div class="body">
+<figure class="actfig"><img src="images/hoi-1-canh-01.webp" width="506" height="506" loading="lazy" decoding="async" alt="Title card Hồi I — Gia đình diễn cái chết"><figcaption>Cảnh 01 — Buổi sáng bình thường cuối cùng</figcaption></figure>
+<h2 class="acttitle">Gia đình diễn cái chết</h2>
+<p class="actnote">Cảnh 01–09 · Hai lần lừa khán giả: thảm họa hóa ra là quảng cáo, và job này hóa ra là một cái bẫy.</p>
+</div>
+</div>
 <section class="scene" id="c1" data-n="1" data-head="NGOẠI – CHỢ ĐỒNG XUÂN – NGÀY">
 <div class="gut"><span class="cn">Cảnh</span><span class="num">1</span><button class="play" title="Đọc từ cảnh 1" aria-label="Đọc từ cảnh 1">&#9654;</button></div>
 <div class="body">
@@ -917,6 +950,14 @@ h1 .l2{color:var(--accent)}
 <p class="action" data-u="438">Anh thở dài.</p>
 <div class="line" data-u="439"><p class="cue">QUANG</p><p class="dlg">Được.</p></div>
 </div></section>
+<div class="acthead" id="hoiii">
+<div class="gut"><span class="cn">Hồi</span><span class="num">II</span></div>
+<div class="body">
+<figure class="actfig"><img src="images/hoi-2-canh-10.webp" width="506" height="506" loading="lazy" decoding="async" alt="Title card Hồi II — Ngôi trường nhận ra họ"><figcaption>Cảnh 10 — Cánh cổng và ô cửa sổ tầng ba</figcaption></figure>
+<h2 class="acttitle">Ngôi trường nhận ra họ</h2>
+<p class="actnote">Cảnh 10–17 · Ánh sáng cạn dần. Ai cũng vui, trừ Quang và người bảo vệ.</p>
+</div>
+</div>
 <section class="scene" id="c10" data-n="10" data-head="NGOẠI – CỔNG TRƯỜNG BỎ HOANG – CHIỀU">
 <div class="gut"><span class="cn">Cảnh</span><span class="num">10</span><button class="play" title="Đọc từ cảnh 10" aria-label="Đọc từ cảnh 10">&#9654;</button></div>
 <div class="body">
@@ -1530,6 +1571,14 @@ h1 .l2{color:var(--accent)}
 <p class="action" data-u="1019">Ông nhìn về phía ngôi trường ở rất xa.</p>
 <div class="line" data-u="1020"><p class="cue">LÃO ĐẠO SĨ</p><p class="dlg">Cuối cùng cũng đến lúc rồi.</p></div>
 </div></section>
+<div class="acthead" id="hoiiii">
+<div class="gut"><span class="cn">Hồi</span><span class="num">III</span></div>
+<div class="body">
+<figure class="actfig"><img src="images/hoi-3-canh-18.webp" width="506" height="506" loading="lazy" decoding="async" alt="Title card Hồi III — Đêm bắt đầu"><figcaption>Cảnh 18 — 22:47</figcaption></figure>
+<h2 class="acttitle">Đêm bắt đầu</h2>
+<p class="actnote">Cảnh 18–23 · Vòng muối bị phá. Từ đây không còn chế độ sản xuất.</p>
+</div>
+</div>
 <section class="scene" id="c18" data-n="18" data-head="PHÒNG KÝ TÚC XÁ – ĐÊM">
 <div class="gut"><span class="cn">Cảnh</span><span class="num">18</span><button class="play" title="Đọc từ cảnh 18" aria-label="Đọc từ cảnh 18">&#9654;</button></div>
 <div class="body">
@@ -2018,6 +2067,14 @@ h1 .l2{color:var(--accent)}
 <div class="line" data-u="1483"><p class="cue">QUANG</p><p class="dlg">Đi theo chú ấy.</p></div>
 <p class="action" data-u="1484">Cả nhóm nhanh chóng bước ra.</p>
 </div></section>
+<div class="acthead" id="hoiiv">
+<div class="gut"><span class="cn">Hồi</span><span class="num">IV</span></div>
+<div class="body">
+<figure class="actfig"><img src="images/hoi-4-canh-24.webp" width="506" height="506" loading="lazy" decoding="async" alt="Title card Hồi IV — Địa đạo và nghi lễ"><figcaption>Cảnh 24 — Cánh cửa sắt dưới lớp nền</figcaption></figure>
+<h2 class="acttitle">Địa đạo và nghi lễ</h2>
+<p class="actnote">Cảnh 24–39 · Mảnh hồn dẫn đường bằng ký ức, và đối thủ hóa ra là người sống.</p>
+</div>
+</div>
 <section class="scene" id="c24" data-n="24" data-head="HÀNH LANG KÝ TÚC XÁ – ĐÊM">
 <div class="gut"><span class="cn">Cảnh</span><span class="num">24</span><button class="play" title="Đọc từ cảnh 24" aria-label="Đọc từ cảnh 24">&#9654;</button></div>
 <div class="body">
@@ -2777,6 +2834,14 @@ h1 .l2{color:var(--accent)}
 <p class="action" data-u="2172">Hắn quay người.</p>
 <p class="action" data-u="2173">Rời đi theo một lối khác.</p>
 </div></section>
+<div class="acthead" id="hoiv">
+<div class="gut"><span class="cn">Hồi</span><span class="num">V</span></div>
+<div class="body">
+<figure class="actfig"><img src="images/hoi-5-canh-40.webp" width="506" height="506" loading="lazy" decoding="async" alt="Title card Hồi V — Cao trào"><figcaption>Cảnh 40 — 23:41 và 23:58</figcaption></figure>
+<h2 class="acttitle">Cao trào</h2>
+<p class="actnote">Cảnh 40–49 · Đối đầu, tiết lộ, và một cú tính sai về thời gian.</p>
+</div>
+</div>
 <section class="scene" id="c40" data-n="40" data-head="PHÒNG NGHI LỄ – ĐỊA ĐẠO – ĐÊM">
 <div class="gut"><span class="cn">Cảnh</span><span class="num">40</span><button class="play" title="Đọc từ cảnh 40" aria-label="Đọc từ cảnh 40">&#9654;</button></div>
 <div class="body">
@@ -3389,6 +3454,14 @@ h1 .l2{color:var(--accent)}
 <div class="line" data-u="2744"><p class="cue">LÃO ĐẠO SĨ</p><p class="dlg">Thời gian.</p></div>
 </div></section>
 <div class="gap"><span class="glabel">Ghi chú bản thảo</span><p>Bản thảo nhảy từ Cảnh 49 sang Cảnh 58. Các cảnh 50–57 chưa có trong bản này.</p></div>
+<div class="acthead" id="hoivi">
+<div class="gut"><span class="cn">Hồi</span><span class="num">VI</span></div>
+<div class="body">
+<figure class="actfig"><img src="images/hoi-6-canh-58.webp" width="506" height="506" loading="lazy" decoding="async" alt="Title card Hồi VI — Cha nghe hết rồi"><figcaption>Cảnh 58 — Cha đang nghe đây</figcaption></figure>
+<h2 class="acttitle">Cha nghe hết rồi</h2>
+<p class="actnote">Cảnh 58–61 · Kịch bản không đóng bằng thắng trận, mà bằng một bài hát được nghe trọn.</p>
+</div>
+</div>
 <section class="scene" id="c58" data-n="58" data-head="PHÒNG NGHI LỄ – ĐÊM">
 <div class="gut"><span class="cn">Cảnh</span><span class="num">58</span><button class="play" title="Đọc từ cảnh 58" aria-label="Đọc từ cảnh 58">&#9654;</button></div>
 <div class="body">
